@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Nunito+Sans:wght@300;400;600&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #07101d;
+  --text: #f0f2f5;
+
+  /* Design system tokens */
+  --c-heading:  #ffffffcc; /* section headings  — Nunito Sans 36px ls=3 */
+  --c-nav:      #ffffff99; /* nav / logo / pills — Nunito 14px          */
+  --c-label:    #ffffff50; /* section labels     — Inter 14px w=500 ls=4*/
+  --c-body:     #9A9088;   /* body / roles / desc— Inter 14-18px        */
+  --c-body-alt: #ffffff70; /* lighter body alt                           */
+  --c-card:     #ffffff;   /* card titles        — Nunito 32px w=600    */
+
+  --border: rgba(255, 255, 255, 0.09);
+
+  /* legacy aliases kept for compatibility */
+  --text-muted: #9A9088;
+  --text-dim:   #ffffff50;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { text-decoration: none; color: inherit; }

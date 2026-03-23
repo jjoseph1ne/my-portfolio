@@ -1,0 +1,479 @@
+/* ── HERO ── */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 120px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 30% 60%, rgba(6, 28, 54, 0.9) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 30%, rgba(10, 40, 70, 0.7) 0%, transparent 50%),
+    linear-gradient(180deg, #0a1929 0%, #061220 40%, #03090f 100%);
+}
+
+/* Animated water shimmer */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(0, 80, 130, 0.35) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 60, 110, 0.25) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 100, 160, 0.15) 0%, transparent 60%);
+  animation: shimmer 8s ease-in-out infinite alternate;
+}
+
+@keyframes shimmer {
+  0%   { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 1;   transform: scale(1.04); }
+}
+
+/* Subtle caustic light effect */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 200px 80px at 25% 35%, rgba(60, 160, 220, 0.08) 0%, transparent 100%),
+    radial-gradient(ellipse 300px 120px at 65% 55%, rgba(20, 100, 180, 0.06) 0%, transparent 100%),
+    radial-gradient(ellipse 150px 60px at 45% 20%, rgba(80, 180, 240, 0.05) 0%, transparent 100%);
+  animation: caustic 12s ease-in-out infinite alternate;
+}
+
+@keyframes caustic {
+  0%   { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(7, 16, 29, 0.3) 0%,
+    rgba(7, 16, 29, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.hero-name {
+  font-family: 'Nunito Sans', serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.hero-label {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #9ccaff;
+  margin-top: 2px;
+}
+
+.hero-cats {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: #9ccaff;
+  margin-top: 4px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.hero-btn {
+  padding: 8px 22px;
+  border: 1px solid rgba(156, 202, 255, 0.35);
+  border-radius: 100px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #9ccaff;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--text);
+}
+
+/* ── WORKS ── */
+.works {
+  padding: 100px 60px;
+}
+
+.works-header {
+  margin-bottom: 48px;
+}
+
+.section-label {
+  display: block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--c-label);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c-heading);
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.work-card {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 28px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Card backgrounds – approximate wireframe imagery with CSS gradients */
+.card-product {
+  background:
+    linear-gradient(160deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%),
+    radial-gradient(ellipse at 40% 50%, #1a0a4a 0%, #0a0520 40%, #050215 70%),
+    radial-gradient(ellipse at 70% 30%, rgba(80, 40, 180, 0.6) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 70%, rgba(40, 80, 200, 0.5) 0%, transparent 50%);
+}
+
+.card-marketing {
+  background:
+    linear-gradient(160deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%),
+    linear-gradient(135deg, #00c8ff 0%, #0060e0 35%, #001a8c 65%, #000d50 100%);
+}
+
+.card-photography {
+  background:
+    linear-gradient(160deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.25) 100%),
+    linear-gradient(180deg, #2a2e35 0%, #1a1d22 40%, #0d0f12 100%);
+}
+
+.card-about {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.55) 100%),
+    linear-gradient(135deg, #c8cdd6 0%, #e8eaee 40%, #f4f5f7 100%);
+}
+
+/* The overlay gradient that fades to black at the bottom */
+.work-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  z-index: 0;
+}
+
+.card-num {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.05em;
+  z-index: 1;
+}
+
+.card-info {
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 15, 30, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-right: 36px; /* leave room for arrow */
+}
+
+.card-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--c-card);
+  letter-spacing: 0.01em;
+  margin-bottom: 5px;
+  line-height: 1.1;
+}
+
+.card-about .card-title {
+  color: #1a1a1a;
+}
+
+.card-tags {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--c-body-alt);
+  letter-spacing: 0.03em;
+}
+
+.card-about .card-tags {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.card-arrow {
+  position: absolute;
+  bottom: 22px;
+  right: 24px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.card-about .card-arrow {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.work-card:hover .card-arrow {
+  transform: translateX(4px);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-about:hover .card-arrow {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* ── EXPERIENCE ── */
+.experience {
+  padding: 80px 60px 100px;
+}
+
+.exp-heading {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c-heading);
+  margin-bottom: 56px;
+}
+
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.exp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px 28px;
+  border-top: 1px solid var(--border);
+  border-left: 3px solid #4b8de8;
+}
+
+.exp-company {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Company name — dim, role gets the blue */
+.exp-item .exp-company { color: var(--c-body-alt); }
+
+.exp-role {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #9ccaff;
+  display: block;
+  margin-top: 2px;
+}
+
+.exp-period {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--c-label);
+  letter-spacing: 0.02em;
+  display: block;
+  margin-top: 6px;
+}
+
+.exp-desc {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--c-body);
+  line-height: 1.75;
+  padding-top: 4px;
+  flex: 1;
+}
+
+.exp-tags {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--c-label);
+  letter-spacing: 0.04em;
+  margin-top: 14px;
+}
+
+/* ── CONTACT ── */
+.contact {
+  padding: 120px 60px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg) 0%, #040b15 100%);
+}
+
+.contact-label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.contact-heading {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  color: var(--c-heading);
+  margin-bottom: 20px;
+}
+
+.contact-sub {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--c-body);
+  max-width: 400px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.contact-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  padding: 11px 28px;
+  border-radius: 100px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.email-btn {
+  background: rgba(40, 90, 200, 0.18);
+  border: 1px solid rgba(80, 140, 240, 0.3);
+  color: var(--text);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.email-btn:hover {
+  background: rgba(40, 90, 200, 0.28);
+  border-color: rgba(80, 140, 240, 0.55);
+}
+
+.linkedin-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--text);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.linkedin-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .works { padding: 80px 40px; }
+  .experience { padding: 60px 40px 80px; }
+  .contact { padding: 100px 40px; }
+  .hero { padding: 0 80px; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 32px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-btns {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .works { padding: 60px 24px; }
+  .works-grid { grid-template-columns: 1fr; }
+  .experience { padding: 40px 24px 60px; }
+  .contact { padding: 80px 24px; }
+
+  .exp-grid {
+    grid-template-columns: 1fr;
+  }
+}
