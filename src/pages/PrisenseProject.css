@@ -1,0 +1,910 @@
+.folio-project-page-prisense {
+  --c-heading: #1f261f;
+  --c-body: rgba(41, 51, 44, 0.84);
+  --c-label: rgba(74, 98, 83, 0.68);
+}
+
+.folio-project-page-prisense::before {
+  background:
+    radial-gradient(circle at 14% 12%, rgba(244, 185, 206, 0.28), transparent 22%),
+    radial-gradient(circle at 84% 18%, rgba(202, 228, 247, 0.26), transparent 20%),
+    radial-gradient(circle at 52% 88%, rgba(224, 221, 255, 0.28), transparent 22%),
+    linear-gradient(180deg, rgba(252, 247, 248, 0.98), rgba(246, 248, 250, 0.9));
+}
+
+.folio-project-page-prisense::after {
+  opacity: 0.22;
+  background-image:
+    radial-gradient(circle at 16px 16px, rgba(196, 127, 164, 0.18) 0 1.5px, transparent 1.7px),
+    radial-gradient(circle at 66px 40px, rgba(168, 189, 239, 0.16) 0 1.3px, transparent 1.5px);
+  background-size: 128px 128px;
+}
+
+.folio-project-hero-prisense::before {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(251, 247, 246, 0.44) 0%,
+      rgba(249, 248, 247, 0.18) 30%,
+      rgba(247, 248, 249, 0.74) 100%
+    ),
+    url('/projects/prisense-assets/cover-portrait.png') center 68% / cover no-repeat;
+}
+
+.folio-project-hero-prisense::after {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(250, 249, 248, 0.82) 0%,
+      rgba(250, 249, 248, 0.36) 42%,
+      rgba(247, 248, 249, 0.86) 100%
+    );
+}
+
+.folio-project-page-prisense .folio-project-card {
+  border-color: rgba(255, 255, 255, 0.88);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(248, 250, 249, 0.58));
+  box-shadow:
+    0 24px 56px rgba(88, 96, 108, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+.folio-project-page-prisense .folio-project-actions a {
+  border-color: rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.folio-project-meta-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.folio-prisense-context-grid,
+.folio-prisense-table-card,
+.folio-prisense-code-card {
+  align-items: stretch;
+}
+
+.folio-project-page-prisense .folio-project-grid.two-up > * {
+  min-width: 0;
+}
+
+.folio-project-page-prisense .folio-main,
+.folio-project-page-prisense .folio-project-section,
+.folio-project-page-prisense .folio-project-grid {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.folio-prisense-image-card {
+  padding: 18px;
+}
+
+.folio-prisense-prompt-image,
+.folio-prisense-research-note {
+  display: block;
+  width: 100%;
+  border-radius: 22px;
+}
+
+.folio-prisense-table-wrap {
+  overflow-x: auto;
+}
+
+/* Primary research — equal-height top cards + full-width rows below */
+.folio-prisense-research-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.folio-prisense-research-full {
+  grid-column: 1 / -1;
+}
+
+.folio-prisense-sample-card,
+.folio-prisense-survey-stat-card {
+  min-height: 100%;
+  min-width: 0;
+}
+
+.folio-prisense-research-block {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.folio-prisense-insights-card,
+.folio-prisense-statements-wrap {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.folio-prisense-sitemap-card {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.folio-prisense-sample-image-wrap {
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.folio-prisense-sample-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.folio-prisense-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.folio-prisense-table th,
+.folio-prisense-table td {
+  padding: 14px 14px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(46, 55, 50, 0.1);
+  font-size: 14px;
+  line-height: 1.64;
+  color: var(--c-body);
+}
+
+.folio-prisense-table th {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-label);
+}
+
+.folio-prisense-table td:first-child,
+.folio-prisense-table th:first-child {
+  padding-left: 0;
+}
+
+.folio-prisense-table td:last-child,
+.folio-prisense-table th:last-child {
+  padding-right: 0;
+}
+
+.folio-prisense-stat-list {
+  display: grid;
+  gap: 8px;
+  padding-left: 18px;
+  min-width: 0;
+}
+
+.folio-prisense-insight-list {
+  display: grid;
+  gap: 8px;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.folio-prisense-insight-list li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--c-body);
+}
+
+.folio-prisense-statement-list-plain {
+  display: grid;
+  gap: 10px;
+}
+
+.folio-prisense-statement-row-plain {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.folio-prisense-statement-row-plain strong {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--c-label);
+}
+
+.folio-prisense-statement-row-plain p {
+  font-size: 14px;
+  line-height: 1.62;
+  color: var(--c-body);
+}
+
+.folio-prisense-stat-list li,
+.folio-prisense-ordered-list li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--c-body);
+}
+
+.folio-prisense-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.folio-prisense-chip-card,
+.folio-prisense-statement-card {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  min-height: 70px;
+  padding: 8px 9px;
+  border: 1px solid rgba(46, 55, 50, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.42);
+  overflow: hidden;
+}
+
+.folio-prisense-chip-card strong,
+.folio-prisense-statement-card strong,
+.folio-prisense-persona-top h3 {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #26372d;
+}
+
+.folio-prisense-chip-card p,
+.folio-prisense-statement-card p {
+  font-size: 10px;
+  line-height: 1.32;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.folio-prisense-statement-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.folio-prisense-persona-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+
+/* Card: no padding — header + dl rows handle their own spacing */
+.folio-prisense-persona-card {
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Header block */
+.folio-prisense-persona-header {
+  display: grid;
+  gap: 3px;
+  padding: 16px 18px 14px;
+  border-bottom: 1px solid rgba(46, 55, 50, 0.08);
+}
+
+.folio-prisense-persona-name {
+  margin: 2px 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--c-heading);
+  text-transform: none;
+}
+
+.folio-prisense-persona-details {
+  margin: 5px 0 0;
+  font-size: 10.5px;
+  line-height: 1.48;
+  color: var(--c-label);
+}
+
+/* Definition list rows — each row perfectly consistent */
+.folio-prisense-persona-dl {
+  display: grid;
+  margin: 0;
+  padding: 0;
+}
+
+.folio-prisense-persona-row {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 8px;
+  padding: 11px 18px;
+  border-bottom: 1px solid rgba(46, 55, 50, 0.06);
+  align-items: baseline;
+}
+
+.folio-prisense-persona-row:last-child {
+  border-bottom: none;
+}
+
+.folio-prisense-persona-row dt {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-label);
+  padding-top: 1px;
+}
+
+.folio-prisense-persona-row dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.56;
+  color: var(--c-body);
+}
+
+.folio-prisense-code-card pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  line-height: 1.72;
+  color: var(--c-body);
+}
+
+.folio-prisense-ordered-list {
+  display: grid;
+  gap: 10px;
+  padding-left: 18px;
+}
+
+.folio-prisense-direction-card {
+  padding: 18px;
+}
+
+.folio-prisense-meet-card {
+  padding: 24px;
+  overflow: hidden;
+}
+
+/* Tagline shared by hardware + app cards */
+.folio-prisense-meet-tagline {
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--c-label);
+  margin-bottom: 2px;
+}
+
+/* Concept card — Prism | Sense two-col */
+.folio-prisense-concept-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 22px;
+  align-items: start;
+}
+
+/* Two Objects — merged card */
+.folio-prisense-objects-card {
+  gap: 18px;
+}
+
+.folio-prisense-objects-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* Left: two product images stacked */
+.folio-prisense-objects-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.folio-prisense-object-img-wrap {
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.4);
+  max-height: 260px;
+}
+
+.folio-prisense-object-img-wrap img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Right: wearable specs + divider + companion app */
+.folio-prisense-objects-detail {
+  display: grid;
+  gap: 0;
+}
+
+.folio-prisense-objects-block {
+  display: grid;
+  gap: 12px;
+  padding: 4px 0 20px;
+}
+
+.folio-prisense-objects-block:first-child {
+  padding-top: 0;
+}
+
+.folio-prisense-objects-divider {
+  height: 1px;
+  background: rgba(46, 55, 50, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Companion app row: text left, screens right */
+.folio-prisense-app-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* App screens row */
+.folio-prisense-app-screens {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+
+.folio-prisense-meet-strip-card {
+  display: grid;
+  gap: 7px;
+}
+
+.folio-prisense-meet-strip-card img {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.folio-prisense-meet-strip-card span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-label);
+  text-align: center;
+}
+
+.folio-prisense-meet-lead {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.45;
+  color: var(--c-heading);
+}
+
+.folio-prisense-meet-system-copy p {
+  margin: 0;
+}
+
+.folio-prisense-meet-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(248, 225, 208, 0.9);
+  color: var(--c-heading);
+  font-size: 0.98rem;
+}
+
+.folio-prisense-meet-modes {
+  display: grid;
+  gap: 10px;
+}
+
+.folio-prisense-meet-modes p,
+.folio-prisense-meet-system-copy p {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.folio-prisense-meet-visuals {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+
+.folio-prisense-meet-visual-card,
+.folio-prisense-meet-system-top {
+  overflow: hidden;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.folio-prisense-meet-visual-card img,
+.folio-prisense-meet-system-top img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.folio-prisense-meet-visual-card-strip {
+  padding: 18px;
+}
+
+.folio-prisense-meet-system-top {
+  max-width: 420px;
+}
+
+.folio-prisense-meet-system-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.folio-prisense-meet-system-copy strong,
+.folio-prisense-meet-modes strong {
+  color: var(--c-heading);
+}
+
+.folio-prisense-onboarding-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.folio-prisense-onboarding-card {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.folio-prisense-onboarding-image {
+  display: block;
+  width: 100%;
+  border-radius: 18px;
+}
+
+/* ── App Screens ──────────────────────────────────────── */
+
+.folio-prisense-appflow-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.folio-prisense-appflow-card {
+  padding: 10px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.folio-prisense-appflow-image {
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.folio-prisense-appflow-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 4px;
+}
+
+.folio-prisense-appflow-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-heading);
+  letter-spacing: 0.01em;
+}
+
+.folio-prisense-appflow-sub {
+  font-size: 11px;
+  color: var(--c-label);
+  letter-spacing: 0.02em;
+}
+
+/* Create Event flow */
+.folio-prisense-eventflow-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.folio-prisense-eventflow-item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.folio-prisense-eventflow-card {
+  width: 160px;
+}
+
+.folio-prisense-appflow-step {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--c-label);
+  text-transform: uppercase;
+}
+
+.folio-prisense-eventflow-arrow {
+  font-size: 16px;
+  color: var(--c-label);
+  padding: 0 8px;
+  flex-shrink: 0;
+  margin-top: -24px;
+}
+
+/* Interactive prototype */
+.folio-prisense-proto-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  background: #111;
+  border: none;
+}
+
+.folio-prisense-proto-phone {
+  width: 280px;
+  height: 607px;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 0 0 8px #222, 0 24px 64px rgba(0, 0, 0, 0.7);
+  flex-shrink: 0;
+}
+
+.folio-prisense-proto-iframe {
+  width: 430px;
+  height: 932px;
+  border: none;
+  display: block;
+  transform: scale(0.6512);
+  transform-origin: top left;
+}
+
+/* ── Sitemap ──────────────────────────────────────────── */
+
+.folio-prisense-sitemap-card {
+  display: grid;
+  gap: 22px;
+  padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(213, 233, 243, 0.88), rgba(211, 231, 242, 0.78));
+}
+
+.folio-prisense-sitemap-home {
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.folio-prisense-sitemap-grid {
+  display: grid;
+  grid-template-columns: 148px 220px 370px 155px;
+  gap: 16px;
+  align-items: start;
+  min-width: 960px;
+}
+
+.folio-prisense-sitemap-col {
+  display: grid;
+  gap: 14px;
+}
+
+.folio-prisense-sitemap-col-onboarding {
+  padding-top: 1px;
+}
+
+.folio-prisense-sitemap-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.folio-prisense-sitemap-row {
+  display: grid;
+  grid-template-columns: 108px 14px 1fr;
+  gap: 4px;
+  align-items: center;
+  min-width: 0;
+}
+
+.folio-prisense-sitemap-row-top {
+  align-items: start;
+}
+
+.folio-prisense-sitemap-inline {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+
+.folio-prisense-sitemap-detail-stack {
+  display: grid;
+  gap: 10px;
+  padding-top: 2px;
+  min-width: 0;
+}
+
+.folio-prisense-sitemap-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 10px 12px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 11.5px;
+  line-height: 1.3;
+  color: #111;
+  overflow-wrap: break-word;
+  word-break: normal;
+  min-width: 0;
+}
+
+.folio-prisense-sitemap-block-root {
+  min-height: 88px;
+  background: #4df0a1;
+  font-size: 12.5px;
+}
+
+.folio-prisense-sitemap-block-section {
+  min-height: 88px;
+  background: #4fa2ea;
+  font-size: 13px;
+}
+
+.folio-prisense-sitemap-block-main {
+  background: #f9d4d7;
+  min-height: 52px;
+}
+
+.folio-prisense-sitemap-block-detail {
+  background: #fff7c7;
+  justify-content: flex-start;
+  text-align: left;
+  min-height: 44px;
+  padding: 8px 10px;
+  font-size: 9.5px;
+  line-height: 1.35;
+  overflow-wrap: break-word;
+  word-break: normal;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.folio-prisense-sitemap-connector {
+  height: 1.5px;
+  background: rgba(26, 26, 26, 0.72);
+  position: relative;
+}
+
+.folio-prisense-sitemap-connector::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid rgba(26, 26, 26, 0.72);
+  border-right: 1.5px solid rgba(26, 26, 26, 0.72);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.folio-prisense-sitemap-connector-diagonal {
+  width: 22px;
+  justify-self: end;
+  transform: translateY(-2px) rotate(48deg);
+  transform-origin: right center;
+}
+
+@media (max-width: 1180px) {
+  .folio-prisense-chip-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .folio-prisense-statement-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .folio-prisense-sitemap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .folio-prisense-onboarding-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .folio-prisense-concept-cols {
+    gap: 18px;
+  }
+
+  .folio-prisense-objects-body {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 980px) {
+  .folio-project-meta-three,
+  .folio-prisense-chip-grid,
+  .folio-prisense-statement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-prisense-persona-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-prisense-onboarding-flow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .folio-prisense-research-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-prisense-concept-cols,
+  .folio-prisense-objects-body,
+  .folio-prisense-app-row {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-prisense-objects-images {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .folio-prisense-app-screens {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .folio-prisense-meet-lead {
+    font-size: 1rem;
+  }
+
+  .folio-prisense-meet-modes p,
+  .folio-prisense-meet-system-copy p {
+    font-size: 14px;
+  }
+
+  .folio-prisense-sitemap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-prisense-sitemap-row,
+  .folio-prisense-sitemap-inline {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-prisense-sitemap-connector {
+    display: none;
+  }
+
+  .folio-prisense-sitemap-block-wide {
+    width: 100%;
+  }
+}

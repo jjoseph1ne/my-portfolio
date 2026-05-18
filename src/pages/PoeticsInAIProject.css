@@ -1,0 +1,40 @@
+.poetics-ai-stack {
+  width: min(100%, 100%);
+  gap: 18px;
+}
+
+.poetics-ai-layout {
+  gap: 46px;
+}
+
+.poetics-ai-copy {
+  display: grid;
+  gap: 34px;
+  max-width: 100%;
+}
+
+.poetics-ai-media {
+  display: grid;
+  gap: 18px;
+}
+
+.poetics-ai-media .archive-project-panel:first-of-type img,
+.poetics-ai-media .archive-project-video-block:first-of-type {
+  width: 100%;
+}
+
+.poetics-ai-video {
+  display: block;
+  width: 100%;
+  background: #000;
+}
+
+@media (max-width: 900px) {
+  .poetics-ai-layout {
+    gap: 22px;
+  }
+
+  .poetics-ai-copy {
+    max-width: 100%;
+  }
+}

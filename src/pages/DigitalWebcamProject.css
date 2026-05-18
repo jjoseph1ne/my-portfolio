@@ -1,0 +1,22 @@
+.digital-webcam-stack {
+  width: min(100%, 900px);
+  gap: 28px;
+}
+
+.digital-webcam-copy {
+  max-width: 760px;
+}
+
+.digital-webcam-hero .archive-project-panel {
+  margin: 0;
+}
+
+.digital-webcam-video-block {
+  width: 100%;
+}
+
+.digital-webcam-video {
+  display: block;
+  width: 100%;
+  background: #000;
+}

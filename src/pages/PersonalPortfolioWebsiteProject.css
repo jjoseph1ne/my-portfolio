@@ -1,0 +1,23 @@
+.personal-portfolio-stack {
+  width: min(100%, 920px);
+  gap: 26px;
+}
+
+.personal-portfolio-copy {
+  max-width: 760px;
+}
+
+.personal-portfolio-cover {
+  margin: 0;
+}
+
+.personal-portfolio-cover img,
+.personal-portfolio-video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.personal-portfolio-video {
+  background: #000;
+}

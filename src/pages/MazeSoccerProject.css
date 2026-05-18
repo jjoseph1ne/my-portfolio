@@ -1,0 +1,22 @@
+.maze-soccer-stack {
+  width: min(100%, 900px);
+  gap: 28px;
+}
+
+.maze-soccer-copy {
+  max-width: 760px;
+}
+
+.maze-soccer-hero .archive-project-panel {
+  margin: 0;
+}
+
+.maze-soccer-video-block {
+  width: 100%;
+}
+
+.maze-soccer-video {
+  display: block;
+  width: 100%;
+  background: #000;
+}

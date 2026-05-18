@@ -1,0 +1,24 @@
+.yearbook-project-stack {
+  width: min(100%, 1240px);
+  gap: 20px;
+}
+
+.yearbook-project-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.23fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.yearbook-project-column {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+@media (max-width: 900px) {
+  .yearbook-project-columns {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

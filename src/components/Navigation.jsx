@@ -8,7 +8,7 @@ export default function Navigation() {
       <div className="nav-links">
         <Link to="/product" className="nav-link">Product · UX</Link>
         <Link to="/marketing" className="nav-link">Marketing</Link>
-        <Link to="/photography" className="nav-link">Visual</Link>
+        <Link to="/photography" className="nav-link">Archive</Link>
         <Link to="/about" className="nav-link">About</Link>
       </div>
     </nav>

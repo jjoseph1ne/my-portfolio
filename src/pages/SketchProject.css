@@ -1,0 +1,20 @@
+.sketch-project-stack {
+  gap: 16px;
+}
+
+.sketch-project-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .sketch-project-stack {
+    gap: 18px;
+  }
+
+  .sketch-project-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

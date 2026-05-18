@@ -1,173 +1,597 @@
-.page-main {
-  min-height: 100vh;
+.folio-page,
+.folio-main {
+  display: grid;
+  gap: 92px;
+}
+
+.folio-page-about .folio-main {
+  gap: 84px;
+  padding: 18px clamp(22px, 3.2vw, 56px) 0 clamp(10px, 1.8vw, 24px);
+}
+
+.folio-hero,
+.folio-section,
+.folio-contact-strip {
+  position: relative;
+}
+
+.folio-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-label);
+}
+
+.folio-kicker::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--border-strong);
+}
+
+.folio-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 32px;
+  align-items: start;
+  padding-top: 16px;
+}
+
+.folio-title {
+  max-width: 10.5ch;
+  margin-top: 20px;
+  font-size: clamp(2.9rem, 5.8vw, 4.7rem);
+  font-weight: 600;
+  line-height: 0.99;
+  letter-spacing: -0.05em;
+  color: var(--c-heading);
+}
+
+.folio-intro {
+  max-width: 58ch;
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.78;
+  color: var(--c-body);
+}
+
+.folio-hero-panel,
+.folio-case-item,
+.folio-note-card,
+.folio-quote-card,
+.folio-contact-card,
+.folio-about-card,
+.folio-block {
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 28px;
+  background: var(--glass);
+  box-shadow:
+    var(--shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(26px);
+}
+
+.folio-hero-panel {
+  padding: 24px;
+}
+
+.folio-panel-label,
+.folio-case-number,
+.folio-meta-label,
+.folio-tagline {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-label);
+}
+
+.folio-hero-panel p,
+.folio-note-card p,
+.folio-quote-card p,
+.folio-about-copy p,
+.folio-case-copy p,
+.folio-contact-card p,
+.folio-block p {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.72;
+  color: var(--c-body);
+}
+
+.folio-panel-links,
+.folio-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.folio-link,
+.folio-link-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  background: var(--glass);
+  box-shadow:
+    var(--shadow-soft),
+    inset 0 1px 0 rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(18px);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-heading);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.folio-link {
+  background: var(--glass-strong);
+}
+
+.folio-link:hover,
+.folio-link-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    var(--shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.folio-section-header {
+  display: grid;
+  grid-template-columns: minmax(0, 180px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.folio-section-header h2,
+.folio-contact-card h2 {
+  max-width: 16ch;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--c-heading);
+}
+
+.folio-case-list,
+.folio-grid-two,
+.folio-grid-three,
+.folio-list,
+.folio-skill-grid {
+  margin-top: 28px;
+}
+
+.folio-case-list,
+.folio-list {
+  display: grid;
+  gap: 14px;
+}
+
+.folio-grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.folio-grid-three,
+.folio-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.folio-case-item {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
+  gap: 18px;
+  padding: 18px;
+}
+
+.folio-case-visual {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 22px;
+}
+
+.folio-case-visual::before,
+.folio-case-visual::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+}
+
+.folio-case-visual::before {
+  bottom: -10%;
+  left: -8%;
+  width: 62%;
+  height: 62%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0));
+}
+
+.folio-case-visual::after {
+  top: 8%;
+  right: -8%;
+  width: 44%;
+  height: 44%;
+  background: radial-gradient(circle, rgba(221, 226, 235, 0.84), rgba(221, 226, 235, 0));
+}
+
+.folio-tone-product-1,
+.folio-tone-product-2,
+.folio-tone-product-3,
+.folio-tone-product-4,
+.folio-tone-marketing-1,
+.folio-tone-marketing-2,
+.folio-tone-marketing-3,
+.folio-tone-marketing-4 {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(237, 239, 242, 0.96)),
+    linear-gradient(135deg, rgba(222, 228, 237, 0.34), rgba(243, 243, 239, 0.26));
+}
+
+.folio-tone-product-2,
+.folio-tone-marketing-2 {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(239, 240, 236, 0.96)),
+    linear-gradient(135deg, rgba(228, 232, 226, 0.34), rgba(245, 244, 240, 0.24));
+}
+
+.folio-tone-product-3,
+.folio-tone-marketing-3 {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(235, 238, 240, 0.96)),
+    linear-gradient(135deg, rgba(222, 226, 231, 0.3), rgba(241, 243, 244, 0.24));
+}
+
+.folio-tone-product-4,
+.folio-tone-marketing-4 {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(238, 237, 233, 0.96)),
+    linear-gradient(135deg, rgba(232, 228, 220, 0.32), rgba(244, 243, 238, 0.22));
+}
+
+.folio-case-copy {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+  padding: 8px 8px 8px 10px;
 }
 
-/* Full-bleed hero banner */
-.page-hero-banner {
-  position: relative;
-  height: 55vh;
-  min-height: 360px;
+.folio-case-copy h3 {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -0.035em;
+  color: var(--c-heading);
+}
+
+.folio-note-card h3,
+.folio-quote-card h3,
+.folio-about-card h3,
+.folio-block h3,
+.folio-list-row h3 {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+  color: var(--c-heading);
+}
+
+.folio-case-meta {
   display: flex;
-  align-items: flex-end;
-  padding: 60px;
-  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
 }
 
-.page-hero-product {
-  background:
-    radial-gradient(ellipse at 40% 50%, #1a0a4a 0%, #0a0520 40%, #050215 70%),
-    radial-gradient(ellipse at 70% 30%, rgba(80, 40, 180, 0.6) 0%, transparent 50%),
-    radial-gradient(ellipse at 30% 70%, rgba(40, 80, 200, 0.5) 0%, transparent 50%);
+.folio-case-meta span {
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--c-nav);
 }
 
-.page-hero-marketing {
-  background: linear-gradient(135deg, #00c8ff 0%, #0060e0 35%, #001a8c 65%, #000d50 100%);
+.folio-note-card,
+.folio-quote-card,
+.folio-about-card,
+.folio-block {
+  padding: 22px;
 }
 
-.page-hero-photography {
-  background: linear-gradient(180deg, #2a2e35 0%, #1a1d22 40%, #0d0f12 100%);
+.folio-contact-card {
+  padding: 26px 28px;
+  border-color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 18px 48px rgba(20, 24, 40, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(30px);
 }
 
-.page-hero-about {
-  background: linear-gradient(135deg, #c8cdd6 0%, #e8eaee 40%, #f4f5f7 100%);
+.folio-contact-card h2 {
+  margin-top: 0;
+  font-size: clamp(1.55rem, 2.3vw, 1.95rem);
+  line-height: 1.08;
 }
 
-.page-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+.folio-contact-title-single-line {
+  max-width: none;
+  white-space: nowrap;
 }
 
-.page-hero-text {
-  position: relative;
-  z-index: 1;
+.folio-about-hero {
+  display: block;
+  padding-top: 72px;
+  padding-bottom: 34px;
 }
 
-.page-hero-text h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 6vw, 72px);
-  font-weight: 400;
-  color: #fff;
-  letter-spacing: 0.04em;
-  margin: 8px 0 6px;
-  line-height: 1.1;
+.folio-about-copy {
+  max-width: 100%;
+  padding-top: 0;
+  text-align: center;
 }
 
-.page-hero-about .page-hero-text h1 {
-  color: #1a1a1a;
-}
-
-.page-hero-text p {
-  font-size: 12px;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 0.06em;
-}
-
-.page-hero-about .page-hero-text p {
-  color: rgba(0, 0, 0, 0.45);
-}
-
-/* Body content */
-.page-body {
-  padding: 80px 60px 100px;
-  flex: 1;
-}
-
-.page-placeholder {
-  font-size: 14px;
-  font-weight: 300;
-  color: var(--text-muted);
-  letter-spacing: 0.03em;
-}
-
-/* About-specific */
-.about-body {
-  max-width: 1100px;
-}
-
-.about-grid {
+.folio-about-manifesto {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  margin-bottom: 60px;
+  justify-items: center;
+  gap: 10px;
+  margin-top: 0;
 }
 
-.about-col h2 {
-  font-size: 28px;
+.folio-about-manifesto span {
+  font-family: "Helvetica Neue", "Inter", sans-serif;
+  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
   font-weight: 400;
-  color: var(--text);
-  margin-bottom: 24px;
-  letter-spacing: 0.01em;
+  line-height: 1.14;
+  letter-spacing: -0.035em;
+  color: var(--c-heading);
 }
 
-.about-col p {
-  font-size: 14px;
-  font-weight: 300;
-  color: var(--text-muted);
-  line-height: 1.8;
-  margin-bottom: 16px;
+.folio-page-about .folio-section-header {
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 
-.about-skill {
-  padding: 20px 0;
+.folio-page-about .folio-section-header h2 {
+  max-width: none;
+  font-family: "Helvetica Neue", "Inter", sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  letter-spacing: -0.045em;
+}
+
+.folio-list-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 16px;
+  padding: 18px 0;
   border-top: 1px solid var(--border);
 }
 
-.about-skill:last-child {
+.folio-list-row:last-child {
   border-bottom: 1px solid var(--border);
 }
 
-.about-skill h4 {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+.folio-list-row time,
+.folio-list-row .folio-row-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 8px;
+  color: var(--c-label);
 }
 
-.about-skill p {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--text-muted);
-  margin-bottom: 0;
+.folio-list-row p {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.68;
+  color: var(--c-body);
 }
 
-.about-contact {
-  border-top: 1px solid var(--border);
-  padding-top: 48px;
+.folio-education-lines {
+  margin-top: 18px;
 }
 
-.about-contact-btn {
+.folio-role-line {
+  font-size: 15px;
+  color: var(--c-heading);
+}
+
+.folio-education-program {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.72;
+  color: #111111;
+}
+
+.folio-education-program-school {
+  font-weight: 600;
+  color: #111111;
+}
+
+.folio-education-program-degree {
+  color: #111111;
+}
+
+.folio-education-divider {
   display: inline-block;
-  padding: 12px 28px;
-  border: 1px solid var(--border);
-  border-radius: 100px;
+  margin: 0 10px;
+  color: rgba(108, 116, 132, 0.52);
+}
+
+.folio-education-note {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--c-body);
+}
+
+.folio-education-note-label {
+  margin-top: 0;
+  color: var(--c-heading);
+}
+
+.folio-education-note-value {
+  margin-top: 0;
+  color: var(--c-body);
+}
+
+.folio-education-note-spacious {
+  margin-top: 18px;
+}
+
+.folio-education-note + .folio-education-note {
+  margin-top: 4px;
+}
+
+.folio-entry-lines {
+  margin-top: 10px;
+}
+
+.folio-skill-stack {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.folio-skill-row {
+  display: grid;
+  grid-template-columns: 120px minmax(36px, 72px) minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.folio-skill-line {
+  display: block;
+  height: 1px;
+  margin-top: 14px;
+  background: linear-gradient(90deg, rgba(114, 121, 139, 0.46), rgba(114, 121, 139, 0.1));
+}
+
+.folio-skill-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: center;
+}
+
+.folio-skill-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
   font-size: 13px;
-  font-weight: 400;
-  color: var(--text);
-  transition: border-color 0.2s, background 0.2s;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(26, 29, 36, 0.74);
 }
 
-.about-contact-btn:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.05);
+.folio-skill-tag:not(:last-child)::after {
+  content: '·';
+  margin-left: 14px;
+  color: rgba(114, 121, 139, 0.36);
 }
 
-@media (max-width: 768px) {
-  .page-hero-banner {
-    padding: 40px 24px;
-  }
+.folio-contact-strip,
+.folio-list-row,
+.folio-about-card {
+  border-color: rgba(255, 255, 255, 0.64);
+}
 
-  .page-body {
-    padding: 60px 24px 80px;
-  }
+.folio-about-card,
+.folio-list-row {
+  background: transparent;
+}
 
-  .about-grid {
+.folio-education-degree {
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--c-body);
+}
+
+.folio-skill-label {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-label);
+}
+
+@media (max-width: 1180px) {
+  .folio-hero,
+  .folio-about-hero,
+  .folio-case-item,
+  .folio-grid-two,
+  .folio-grid-three {
     grid-template-columns: 1fr;
-    gap: 40px;
+  }
+
+  .folio-title,
+  .folio-section-header h2,
+  .folio-contact-card h2 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .folio-section-header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .folio-list-row {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-education-note {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .folio-skill-stack {
+    gap: 24px;
+  }
+
+  .folio-skill-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .folio-skill-line {
+    width: 48px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .folio-title {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+  }
+
+  .folio-intro {
+    font-size: 16px;
   }
 }

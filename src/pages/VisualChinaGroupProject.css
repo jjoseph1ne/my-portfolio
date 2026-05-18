@@ -1,0 +1,134 @@
+.vcg-layout {
+  gap: var(--archive-detail-gap);
+}
+
+.vcg-copy {
+  gap: 20px;
+}
+
+.vcg-stack {
+  width: 100%;
+  gap: 0;
+}
+
+.vcg-posters-section {
+  padding-top: 32px;
+  gap: 10px;
+}
+
+.vcg-section-title {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+  color: rgba(38, 38, 38, 0.7);
+}
+
+.vcg-scroll-note {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  color: rgba(38, 38, 38, 0.42);
+}
+
+.vcg-yearbook-section {
+  margin-top: 42px;
+  gap: 16px;
+}
+
+.vcg-yearbook-pages {
+  display: grid;
+  gap: 18px;
+}
+
+.vcg-yearbook-page {
+  margin: 0;
+  width: 100%;
+}
+
+.vcg-yearbook-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.vcg-yearbook-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.vcg-poster-rail {
+  display: flex;
+  gap: 26px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(26, 26, 26, 0.16) transparent;
+}
+
+.vcg-poster-rail::-webkit-scrollbar {
+  height: 8px;
+}
+
+.vcg-poster-rail::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(26, 26, 26, 0.16);
+}
+
+.vcg-poster-rail::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.vcg-poster-card {
+  flex: 0 0 auto;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.vcg-poster-button {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.vcg-poster-image {
+  display: block;
+  width: auto;
+  height: min(48vh, 420px);
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .vcg-layout {
+    gap: 22px;
+  }
+
+  .vcg-stack {
+    width: 100%;
+  }
+
+  .vcg-posters-section {
+    padding-top: 0;
+  }
+
+  .vcg-yearbook-section {
+    margin-top: 34px;
+  }
+
+  .vcg-poster-image {
+    height: min(42vh, 320px);
+  }
+
+  .vcg-poster-rail {
+    gap: 18px;
+  }
+}

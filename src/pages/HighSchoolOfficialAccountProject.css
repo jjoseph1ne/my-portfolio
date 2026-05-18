@@ -1,0 +1,27 @@
+.high-school-official-account-stack {
+  width: min(100%, 1120px);
+  gap: 22px;
+}
+
+.high-school-official-account-row {
+  display: grid;
+  align-items: start;
+}
+
+.high-school-official-account-row-top {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.high-school-official-account-row-bottom {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .high-school-official-account-row-top,
+  .high-school-official-account-row-bottom {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

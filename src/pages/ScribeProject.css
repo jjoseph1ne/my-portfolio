@@ -1,0 +1,42 @@
+.scribe-layout {
+  grid-template-columns: minmax(340px, 380px) minmax(0, 760px);
+  gap: 68px;
+}
+
+.scribe-stack {
+  width: min(100%, 760px);
+  gap: 28px;
+}
+
+.scribe-copy {
+  max-width: 100%;
+}
+
+.scribe-feature {
+  width: min(100%, 760px);
+}
+
+.scribe-video {
+  display: block;
+  width: 100%;
+  background: #000;
+}
+
+.scribe-stack > .archive-project-panel,
+.scribe-stack > .archive-project-video-block {
+  width: min(100%, 760px);
+}
+
+@media (max-width: 900px) {
+  .scribe-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .scribe-stack,
+  .scribe-feature,
+  .scribe-stack > .archive-project-panel,
+  .scribe-stack > .archive-project-video-block {
+    width: 100%;
+  }
+}

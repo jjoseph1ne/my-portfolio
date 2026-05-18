@@ -3,15 +3,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px 60px;
-  border-top: 1px solid var(--border);
-  background: var(--bg);
+  border-top: 1px solid rgba(255, 248, 240, 0.08);
+  background: #151311;
 }
 
 .footer-brand {
-  font-size: 12px;
-  font-weight: 400;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--text-muted);
+  color: rgba(245, 239, 230, 0.9);
 }
 
 .footer-brand:hover {
@@ -24,15 +25,17 @@
 }
 
 .footer-link {
+  font-family: 'Manrope', sans-serif;
   font-size: 12px;
-  font-weight: 400;
-  color: var(--text-dim);
-  letter-spacing: 0.03em;
+  font-weight: 500;
+  color: rgba(214, 201, 186, 0.66);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   transition: color 0.2s ease;
 }
 
 .footer-link:hover {
-  color: var(--text-muted);
+  color: #f5efe6;
 }
 
 .footer-icons {
@@ -42,14 +45,14 @@
 }
 
 .footer-icon {
-  color: var(--text-dim);
+  color: rgba(214, 201, 186, 0.66);
   transition: color 0.2s ease;
   display: flex;
   align-items: center;
 }
 
 .footer-icon:hover {
-  color: var(--text-muted);
+  color: #f5efe6;
 }
 
 @media (max-width: 768px) {

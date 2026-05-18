@@ -1,0 +1,708 @@
+.folio-project-page-fudget {
+  --c-heading: #f6f9ff;
+  --c-body: rgba(232, 240, 255, 0.78);
+  --c-label: rgba(178, 192, 220, 0.58);
+  --c-nav: rgba(228, 235, 247, 0.72);
+  --c-body-alt: rgba(244, 248, 255, 0.94);
+}
+
+.folio-project-page-fudget::before {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.08), transparent 28%),
+    radial-gradient(circle at 84% 10%, rgba(255, 206, 144, 0.14), transparent 24%),
+    linear-gradient(112deg, #6effa1 0%, #272665 35%, #171a39 100%);
+}
+
+.folio-project-page-fudget::after {
+  opacity: 0.28;
+  background-image:
+    radial-gradient(circle at 16px 16px, rgba(106, 102, 255, 0.14) 0 1.4px, transparent 1.6px),
+    radial-gradient(circle at 62px 26px, rgba(110, 255, 161, 0.12) 0 1.3px, transparent 1.5px),
+    radial-gradient(circle at 92px 72px, rgba(255, 255, 255, 0.14) 0 1.2px, transparent 1.4px);
+}
+
+.folio-project-hero-fudget::before {
+  background: url('/projects/fudget-assets/hero-wireframe-2.png') center center / cover no-repeat;
+}
+
+.folio-project-hero-fudget::after {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 18, 24, 0.7) 0%,
+      rgba(14, 22, 30, 0.2) 42%,
+      rgba(18, 20, 46, 0.72) 100%
+    );
+}
+
+.folio-project-page-fudget .folio-project-hero,
+.folio-project-page-fudget .folio-project-card,
+.folio-project-page-fudget .folio-project-shift-card,
+.folio-project-page-fudget .folio-project-tier-card,
+.folio-project-page-fudget .folio-design-panel,
+.folio-project-page-fudget .folio-fudget-persona-copy,
+.folio-project-page-fudget .folio-fudget-persona-points > div,
+.folio-project-page-fudget .folio-fudget-testing-list .folio-project-card {
+  border-color: rgba(180, 201, 255, 0.12);
+  background:
+    linear-gradient(180deg, rgba(22, 28, 44, 0.84), rgba(14, 18, 31, 0.7));
+  box-shadow:
+    0 28px 72px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.folio-project-page-fudget .folio-project-back,
+.folio-project-page-fudget .folio-product-bottom-bar,
+.folio-project-page-fudget .folio-product-bottom-bar a {
+  color: rgba(244, 248, 255, 0.94);
+}
+
+.folio-project-page-fudget .folio-project-back {
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.32);
+}
+
+.folio-project-page-fudget .folio-project-back:hover {
+  color: #ffffff;
+}
+
+.folio-project-page-fudget .folio-project-intro h1,
+.folio-project-page-fudget .folio-project-section-head h2,
+.folio-project-page-fudget .folio-fudget-persona-copy h3 {
+  font-family: 'Unbounded', 'Inter', sans-serif;
+}
+
+.folio-project-page-fudget .folio-project-subtitle,
+.folio-project-page-fudget .folio-project-competition p,
+.folio-project-page-fudget .folio-project-meta p,
+.folio-project-page-fudget .folio-project-card p,
+.folio-project-page-fudget .folio-design-panel p,
+.folio-project-page-fudget .folio-design-panel li,
+.folio-project-page-fudget .folio-fudget-persona-copy p,
+.folio-project-page-fudget .folio-fudget-persona-points p,
+.folio-project-page-fudget .folio-project-prose-columns p,
+.folio-project-page-fudget .folio-meta-label,
+.folio-project-page-fudget .folio-kicker,
+.folio-project-page-fudget .folio-project-feature-number,
+.folio-project-page-fudget .folio-project-actions a,
+.folio-project-page-fudget .folio-project-back,
+.folio-project-page-fudget .folio-product-bottom-bar,
+.folio-project-page-fudget .folio-product-bottom-bar a {
+  font-family: 'Sora', 'Inter', sans-serif;
+}
+
+.folio-project-page-fudget .folio-project-intro h1 {
+  letter-spacing: -0.08em;
+}
+
+.folio-project-page-fudget .folio-project-section-head h2 {
+  line-height: 1.18;
+}
+
+.folio-project-page-fudget .folio-project-subtitle {
+  color: rgba(214, 223, 243, 0.88);
+}
+
+.folio-project-page-fudget .folio-meta-label,
+.folio-project-page-fudget .folio-kicker,
+.folio-project-page-fudget .folio-project-feature-number {
+  color: rgba(221, 234, 255, 0.9);
+}
+
+.folio-project-page-fudget .folio-project-actions a {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  color: #f5f8ff;
+}
+
+.folio-fudget-team-line {
+  white-space: nowrap;
+}
+
+.folio-fudget-persona {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.folio-fudget-persona-copy,
+.folio-fudget-persona-points > div,
+.folio-fudget-testing-list .folio-project-card {
+  border-radius: 28px;
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-fudget-persona-copy {
+  display: grid;
+  gap: 14px;
+  padding: 22px 24px;
+}
+
+.folio-fudget-persona-hero {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+}
+
+.folio-fudget-persona-image {
+  width: clamp(132px, 18vw, 192px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
+}
+
+.folio-fudget-persona-copy h3 {
+  font-size: clamp(1.24rem, 2vw, 1.9rem);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+  color: var(--c-heading);
+}
+
+.folio-fudget-persona-copy p,
+.folio-fudget-persona-points p,
+.folio-fudget-competitive-copy p {
+  font-size: 14px;
+  line-height: 1.72;
+  color: var(--c-body);
+}
+
+.folio-fudget-persona-points {
+  display: grid;
+  gap: 12px;
+}
+
+.folio-fudget-persona-points > div {
+  display: grid;
+  gap: 8px;
+  padding: 18px 20px;
+}
+
+.folio-fudget-persona-side {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 22px 24px;
+  border: 1px solid rgba(180, 201, 255, 0.12);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(22, 28, 44, 0.84), rgba(14, 18, 31, 0.7));
+  box-shadow:
+    0 28px 72px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-fudget-persona-storyboard {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
+}
+
+.folio-fudget-persona-points-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.folio-fudget-persona-copy .folio-meta-label,
+.folio-fudget-persona-side .folio-meta-label {
+  min-height: 1.2em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.folio-fudget-persona-points strong {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #80f4ab;
+}
+
+.folio-fudget-journey-card {
+  border: 1px solid rgba(180, 201, 255, 0.12);
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(22, 28, 44, 0.84), rgba(14, 18, 31, 0.7));
+  box-shadow:
+    0 28px 72px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px) saturate(145%);
+  padding: 22px;
+}
+
+.folio-fudget-journey-image {
+  display: block;
+  width: 100%;
+  border-radius: 22px;
+}
+
+.folio-fudget-competitive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.folio-fudget-competitive-card {
+  gap: 16px;
+  padding: 22px;
+}
+
+.folio-fudget-competitive-image {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.folio-fudget-competitive-copy {
+  display: grid;
+  gap: 6px;
+}
+
+.folio-fudget-competitive-copy h3 {
+  font-family: 'Unbounded', 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.18;
+  color: var(--c-heading);
+}
+
+.folio-fudget-competitive-copy p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(225, 234, 249, 0.8);
+}
+
+.folio-fudget-sitemap-card {
+  border: 1px solid rgba(180, 201, 255, 0.12);
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(22, 28, 44, 0.84), rgba(14, 18, 31, 0.7));
+  box-shadow:
+    0 28px 72px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px) saturate(145%);
+  padding: 22px;
+}
+
+.folio-fudget-sitemap-image {
+  display: block;
+  width: 100%;
+  border-radius: 22px;
+}
+
+.folio-project-page-fudget .folio-project-card p,
+.folio-project-page-fudget .folio-design-panel p,
+.folio-project-page-fudget .folio-design-panel li,
+.folio-project-page-fudget .folio-fudget-persona-copy p,
+.folio-project-page-fudget .folio-fudget-persona-points p,
+.folio-project-page-fudget .folio-fudget-competitive-copy p,
+.folio-project-page-fudget .folio-project-prose-columns p {
+  color: rgba(225, 234, 249, 0.78);
+}
+
+.folio-project-page-fudget .folio-project-card,
+.folio-project-page-fudget .folio-design-panel {
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-fudget-flow-grid,
+.folio-fudget-testing-list {
+  display: grid;
+  gap: 16px;
+}
+
+.folio-fudget-concept-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px) minmax(0, 1fr);
+  align-items: center;
+  gap: 22px;
+  padding: 4px 0 0;
+}
+
+.folio-fudget-concept-column {
+  display: grid;
+  gap: 18px;
+}
+
+.folio-fudget-concept-column-left h3 {
+  font-family: 'Unbounded', 'Inter', sans-serif;
+  font-size: clamp(2.2rem, 5.6vw, 4.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+  color: var(--c-heading);
+  text-transform: lowercase;
+}
+
+.folio-fudget-concept-lead {
+  max-width: 19ch;
+  font-size: clamp(1rem, 1.7vw, 1.42rem);
+  line-height: 1.22;
+  color: var(--c-body-alt);
+}
+
+.folio-fudget-concept-note,
+.folio-fudget-concept-pillar {
+  display: grid;
+  gap: 8px;
+}
+
+.folio-fudget-concept-note strong,
+.folio-fudget-concept-pillar strong {
+  font-family: 'Unbounded', 'Inter', sans-serif;
+  font-size: clamp(1.02rem, 1.7vw, 1.58rem);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+  color: var(--c-heading);
+}
+
+.folio-fudget-concept-note p,
+.folio-fudget-concept-pillar p,
+.folio-fudget-concept-list li {
+  font-size: 14px;
+  line-height: 1.58;
+  color: rgba(225, 234, 249, 0.8);
+}
+
+.folio-fudget-concept-phone-wrap {
+  display: grid;
+  place-items: center;
+}
+
+.folio-fudget-concept-phone {
+  display: block;
+  width: min(100%, 340px);
+  height: auto;
+}
+
+.folio-fudget-concept-list {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+}
+
+.folio-fudget-flow-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.folio-project-page-fudget .folio-project-section-head-nowrap h2 {
+  white-space: nowrap;
+}
+
+.folio-fudget-system-row {
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr 1.35fr 1.1fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.folio-fudget-system-row .folio-design-panel {
+  padding: 14px 14px 16px;
+  gap: 12px;
+  min-height: 0;
+}
+
+.folio-fudget-palette-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 8px;
+}
+
+.folio-fudget-palette-item {
+  display: grid;
+  gap: 6px;
+}
+
+.folio-fudget-swatch {
+  display: block;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+.folio-fudget-swatch-mint {
+  background: #53f68f;
+}
+
+.folio-fudget-swatch-violet {
+  background: #6a66ff;
+}
+
+.folio-fudget-swatch-orange {
+  background: #ff6a1a;
+}
+
+.folio-fudget-swatch-cyan {
+  background: #1ccbee;
+}
+
+.folio-fudget-testing-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.folio-fudget-testing-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+.folio-fudget-testing-row .folio-project-card {
+  min-height: 0;
+  padding: 16px 16px 18px;
+  gap: 8px;
+}
+
+.folio-fudget-testing-row .folio-project-card p {
+  font-size: 13px;
+  line-height: 1.58;
+}
+
+.folio-fudget-type-panel {
+  display: grid;
+  gap: 8px;
+}
+
+.folio-fudget-palette-item p,
+.folio-fudget-type-panel p {
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(225, 234, 249, 0.82);
+}
+
+.folio-fudget-system-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.folio-fudget-tabs-panel {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.folio-fudget-widget-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  align-items: start;
+}
+
+.folio-fudget-system-image-tab-spec {
+  border-radius: 10px;
+}
+
+.folio-fudget-iteration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.folio-fudget-iteration-note {
+  max-width: 56ch;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(225, 234, 249, 0.72);
+}
+
+.folio-fudget-iteration-group {
+  display: grid;
+  gap: 14px;
+}
+
+.folio-fudget-iteration-phones {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.folio-fudget-iteration-phone {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.folio-fudget-iteration-group p {
+  font-family: 'Sora', 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  text-align: center;
+  color: rgba(225, 234, 249, 0.82);
+}
+
+.folio-fudget-hi-fi-flows {
+  display: grid;
+  gap: 16px;
+}
+
+.folio-fudget-hi-fi-row {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.folio-fudget-hi-fi-card {
+  padding: 18px 18px 20px;
+  gap: 14px;
+}
+
+.folio-fudget-hi-fi-card-flow {
+  gap: 16px;
+}
+
+.folio-fudget-hi-fi-image {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.folio-fudget-hi-fi-strip {
+  display: grid;
+  align-items: start;
+  gap: 10px;
+}
+
+.folio-fudget-hi-fi-strip-wallet {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.folio-fudget-hi-fi-strip-community {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.folio-fudget-hi-fi-phone {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+.folio-fudget-additional-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 860px;
+}
+
+.folio-fudget-additional-card {
+  padding: 16px 16px 18px;
+  gap: 12px;
+  align-content: start;
+}
+
+.folio-fudget-additional-image {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.folio-fudget-prototype-embed {
+  border: 1px solid rgba(180, 201, 255, 0.12);
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(11, 14, 28, 0.72);
+  box-shadow:
+    0 28px 72px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.folio-fudget-prototype-embed iframe {
+  display: block;
+  width: 100%;
+  height: min(72vh, 760px);
+  border: 0;
+}
+
+.folio-product-card-fudget.has-cover::after {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)),
+    linear-gradient(180deg, rgba(8, 14, 12, 0.04) 36%, rgba(15, 18, 28, 0.74) 100%);
+}
+
+@media (max-width: 1180px) {
+  .folio-fudget-persona,
+  .folio-fudget-competitive-grid,
+  .folio-fudget-flow-grid,
+  .folio-fudget-testing-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .folio-fudget-concept-stage {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .folio-fudget-concept-column-left,
+  .folio-fudget-concept-column-right {
+    max-width: 760px;
+  }
+
+  .folio-fudget-system-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .folio-fudget-testing-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .folio-fudget-iteration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-fudget-hi-fi-strip-wallet {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .folio-fudget-hi-fi-strip-community {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .folio-fudget-additional-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 760px) {
+  .folio-fudget-persona,
+  .folio-fudget-competitive-grid,
+  .folio-fudget-persona-points-row,
+  .folio-fudget-flow-grid,
+  .folio-fudget-testing-list {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-fudget-persona-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-fudget-system-row {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-fudget-widget-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .folio-fudget-testing-row {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-fudget-hi-fi-strip-wallet,
+  .folio-fudget-hi-fi-strip-community {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

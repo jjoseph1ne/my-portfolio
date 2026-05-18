@@ -1,0 +1,18 @@
+.against-interpretation-stack {
+  width: min(100%, 900px);
+  gap: 26px;
+}
+
+.against-interpretation-copy {
+  max-width: 720px;
+}
+
+.against-interpretation-video-block {
+  width: 100%;
+}
+
+.against-interpretation-video {
+  display: block;
+  width: 100%;
+  background: #000;
+}

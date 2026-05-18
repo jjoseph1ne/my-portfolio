@@ -1,0 +1,59 @@
+.my-thoughts-page {
+  display: grid;
+  gap: 28px;
+}
+
+.my-thoughts-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(36, 36, 36, 0.54);
+  text-decoration: none;
+}
+
+.my-thoughts-hero {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px);
+  gap: 0;
+  align-items: start;
+}
+
+.my-thoughts-meta {
+  display: grid;
+  gap: 4px;
+  padding-top: 8px;
+}
+
+.my-thoughts-title,
+.my-thoughts-subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: rgba(38, 38, 38, 0.58);
+}
+
+.my-thoughts-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.my-thoughts-panel {
+  margin: 0;
+}
+
+.my-thoughts-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .my-thoughts-hero {
+    grid-template-columns: 1fr;
+  }
+}

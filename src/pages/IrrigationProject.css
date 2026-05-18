@@ -1,0 +1,77 @@
+.irrigation-page {
+  display: grid;
+  gap: 28px;
+}
+
+.irrigation-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(36, 36, 36, 0.54);
+  text-decoration: none;
+}
+
+.irrigation-hero {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px);
+  gap: 0;
+  align-items: start;
+}
+
+.irrigation-meta {
+  display: grid;
+  gap: 4px;
+  padding-top: 8px;
+}
+
+.irrigation-title,
+.irrigation-subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: rgba(38, 38, 38, 0.58);
+}
+
+.irrigation-panel {
+  margin: 0;
+}
+
+.irrigation-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.irrigation-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.irrigation-video-block {
+  width: 100%;
+}
+
+.irrigation-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.irrigation-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .irrigation-hero {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,31 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Nunito+Sans:wght@300;400;600&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&family=Unbounded:wght@500;600;700;800&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #07101d;
-  --text: #f0f2f5;
-
-  /* Design system tokens */
-  --c-heading:  #ffffffcc; /* section headings  — Nunito Sans 36px ls=3 */
-  --c-nav:      #ffffff99; /* nav / logo / pills — Nunito 14px          */
-  --c-label:    #ffffff50; /* section labels     — Inter 14px w=500 ls=4*/
-  --c-body:     #9A9088;   /* body / roles / desc— Inter 14-18px        */
-  --c-body-alt: #ffffff70; /* lighter body alt                           */
-  --c-card:     #ffffff;   /* card titles        — Nunito 32px w=600    */
-
-  --border: rgba(255, 255, 255, 0.09);
-
-  /* legacy aliases kept for compatibility */
-  --text-muted: #9A9088;
-  --text-dim:   #ffffff50;
+  --bg: #f6f6f2;
+  --bg-alt: #ecece5;
+  --text: #181818;
+  --c-heading: #111111;
+  --c-nav: rgba(24, 24, 24, 0.68);
+  --c-label: rgba(24, 24, 24, 0.42);
+  --c-body: rgba(24, 24, 24, 0.72);
+  --c-body-alt: rgba(24, 24, 24, 0.9);
+  --c-card: #101010;
+  --border: rgba(18, 18, 18, 0.08);
+  --border-strong: rgba(18, 18, 18, 0.12);
+  --glass: rgba(255, 255, 255, 0.56);
+  --glass-strong: rgba(255, 255, 255, 0.76);
+  --shadow: 0 24px 60px rgba(18, 18, 18, 0.06);
+  --shadow-soft: 0 14px 34px rgba(18, 18, 18, 0.045);
+  --text-muted: rgba(24, 24, 24, 0.72);
+  --text-dim: rgba(24, 24, 24, 0.48);
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Nunito', sans-serif;
-  background: var(--bg);
+  font-family: 'Inter', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.94), transparent 28%),
+    linear-gradient(180deg, #fafaf8 0%, var(--bg) 48%, #f1f1eb 100%);
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;

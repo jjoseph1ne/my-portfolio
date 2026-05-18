@@ -1,0 +1,22 @@
+.dancing-characters-stack {
+  width: min(100%, 920px);
+  gap: 28px;
+}
+
+.dancing-characters-copy {
+  max-width: 780px;
+}
+
+.dancing-characters-hero .archive-project-panel {
+  margin: 0;
+}
+
+.dancing-characters-video-block {
+  width: 100%;
+}
+
+.dancing-characters-video {
+  display: block;
+  width: 100%;
+  background: #000;
+}

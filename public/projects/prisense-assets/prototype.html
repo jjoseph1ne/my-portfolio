@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=393, initial-scale=1, user-scalable=no">
+<title>Prisense Prototype</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:393px;height:852px;overflow:hidden;background:#000;touch-action:none}
+
+/* ── Screens ─────────────────────────────────────────── */
+.screen{
+  position:absolute;top:0;left:0;
+  width:393px;height:852px;
+  will-change:transform;
+  transition:transform .32s cubic-bezier(.4,0,.2,1);
+  transform:translateX(100%);
+}
+.screen.active{transform:translateX(0)}
+.screen.exit-left{transform:translateX(-30%)}
+
+.screen img{
+  display:block;width:393px;height:852px;
+  object-fit:fill;pointer-events:none;user-select:none;
+}
+
+/* ── Hit zones ───────────────────────────────────────── */
+.z{position:absolute;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+
+/* bottom tab bar — 3 equal thirds, 90px tall */
+.tab{position:absolute;bottom:0;height:90px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.tab-home {left:0;        width:131px;}
+.tab-event{left:131px;    width:131px;}
+.tab-me   {left:262px;    width:131px;}
+
+/* overlay for modals/dialogs — sits on top of base screen */
+.overlay{
+  position:absolute;top:0;left:0;width:393px;height:852px;
+  opacity:0;pointer-events:none;
+  transition:opacity .2s ease;
+}
+.overlay.visible{opacity:1;pointer-events:auto;}
+.overlay img{display:block;width:393px;height:852px;object-fit:fill;}
+</style>
+</head>
+<body>
+
+<!-- ── 1. Home / Today ─────────────────────────────── -->
+<div class="screen active" id="s-home">
+  <img src="flow/screen-home.png" alt="Home">
+  <!-- tap any waveform → event detail -->
+  <div class="z" style="top:130px;left:0;width:393px;height:320px;" onclick="go('s-event-detail')"></div>
+  <div class="tab tab-home"></div>
+  <div class="tab tab-event" onclick="go('s-event-list')"></div>
+  <div class="tab tab-me"   onclick="go('s-archive')"></div>
+</div>
+
+<!-- ── 2. Event List ───────────────────────────────── -->
+<div class="screen" id="s-event-list">
+  <img src="flow/event-1.png" alt="Event List">
+  <!-- "+" add event button top right -->
+  <div class="z" style="top:228px;right:12px;width:52px;height:48px;" onclick="show('ol-add-event')"></div>
+  <!-- waveforms → countdown -->
+  <div class="z" style="top:300px;left:0;width:393px;height:200px;" onclick="go('s-countdown')"></div>
+  <div class="tab tab-home"  onclick="go('s-home')"></div>
+  <div class="tab tab-event"></div>
+  <div class="tab tab-me"   onclick="go('s-archive')"></div>
+  <!-- overlays for this screen -->
+  <div class="overlay" id="ol-add-event">
+    <img src="flow/event-2.png" alt="Add Event">
+    <!-- Confirm button -->
+    <div class="z" style="bottom:288px;right:16px;width:120px;height:48px;" onclick="hide('ol-add-event'); go('s-created')"></div>
+    <!-- Cancel button -->
+    <div class="z" style="bottom:288px;left:16px;width:120px;height:48px;" onclick="hide('ol-add-event')"></div>
+  </div>
+</div>
+
+<!-- ── 3. Event Created ────────────────────────────── -->
+<div class="screen" id="s-created">
+  <img src="flow/event-3.png" alt="Event Created">
+  <!-- Confirm button -->
+  <div class="z" style="top:50%;left:50%;transform:translate(-50%,40px);width:120px;height:48px;" onclick="go('s-countdown')"></div>
+  <div class="tab tab-home"  onclick="go('s-home')"></div>
+  <div class="tab tab-event" onclick="go('s-event-list')"></div>
+  <div class="tab tab-me"   onclick="go('s-archive')"></div>
+</div>
+
+<!-- ── 4. Countdown ───────────────────────────────── -->
+<div class="screen" id="s-countdown">
+  <img src="flow/event-4.png" alt="Countdown">
+  <!-- tap countdown tile → cancel dialog -->
+  <div class="z" style="top:292px;left:0;width:393px;height:100px;" onclick="show('ol-cancel')"></div>
+  <div class="tab tab-home"  onclick="go('s-home')"></div>
+  <div class="tab tab-event" onclick="go('s-event-list')"></div>
+  <div class="tab tab-me"   onclick="go('s-archive')"></div>
+  <!-- cancel overlay -->
+  <div class="overlay" id="ol-cancel">
+    <img src="flow/event-5.png" alt="Canceling">
+    <!-- Edit Event -->
+    <div class="z" style="bottom:330px;left:16px;width:150px;height:52px;" onclick="hide('ol-cancel')"></div>
+    <!-- Continue (cancel) -->
+    <div class="z" style="bottom:330px;right:16px;width:150px;height:52px;" onclick="hide('ol-cancel'); go('s-finished')"></div>
+  </div>
+</div>
+
+<!-- ── 5. Finished Events ─────────────────────────── -->
+<div class="screen" id="s-finished">
+  <img src="flow/event-6.png" alt="Finished">
+  <div class="tab tab-home"  onclick="go('s-home')"></div>
+  <div class="tab tab-event" onclick="go('s-event-list')"></div>
+  <div class="tab tab-me"   onclick="go('s-archive')"></div>
+</div>
+
+<!-- ── 6. Event Detail (bubbles) ──────────────────── -->
+<div class="screen" id="s-event-detail">
+  <img src="flow/screen-event.png" alt="Event Detail">
+  <!-- back -->
+  <div class="z" style="top:0;left:0;width:120px;height:70px;" onclick="go('s-home')"></div>
+  <div class="tab tab-home"  onclick="go('s-home')"></div>
+  <div class="tab tab-event" onclick="go('s-event-list')"></div>
+  <div class="tab tab-me"   onclick="go('s-archive')"></div>
+</div>
+
+<!-- ── 7. Archive ─────────────────────────────────── -->
+<div class="screen" id="s-archive">
+  <img src="flow/screen-archive.png" alt="Archive">
+  <!-- settings gear icon top right -->
+  <div class="z" style="top:28px;right:20px;width:56px;height:56px;" onclick="go('s-settings')"></div>
+  <!-- calendar row tap -->
+  <div class="z" style="top:400px;left:0;width:393px;height:80px;" onclick="go('s-calendar')"></div>
+  <div class="tab tab-home"  onclick="go('s-home')"></div>
+  <div class="tab tab-event" onclick="go('s-event-list')"></div>
+  <div class="tab tab-me"></div>
+</div>
+
+<!-- ── 8. Calendar ───────────────────────────────── -->
+<div class="screen" id="s-calendar">
+  <img src="flow/screen-calendar.png" alt="Calendar">
+  <div class="z" style="top:0;left:0;width:120px;height:70px;" onclick="go('s-archive')"></div>
+  <div class="tab tab-home"  onclick="go('s-home')"></div>
+  <div class="tab tab-event" onclick="go('s-event-list')"></div>
+  <div class="tab tab-me"   onclick="go('s-archive')"></div>
+</div>
+
+<!-- ── 9. Settings ───────────────────────────────── -->
+<div class="screen" id="s-settings">
+  <img src="flow/screen-settings.png" alt="Settings">
+  <div class="z" style="top:0;left:0;width:120px;height:70px;" onclick="go('s-archive')"></div>
+  <div class="tab tab-home"  onclick="go('s-home')"></div>
+  <div class="tab tab-event" onclick="go('s-event-list')"></div>
+  <div class="tab tab-me"   onclick="go('s-archive')"></div>
+</div>
+
+<script>
+let cur = 's-home';
+
+function go(id) {
+  if (id === cur) return;
+  const prev = document.getElementById(cur);
+  const next = document.getElementById(id);
+  if (!next) return;
+
+  // slide direction: rough heuristic
+  prev.classList.add('exit-left');
+  next.style.transform = 'translateX(100%)';
+  next.classList.add('active');
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      next.style.transform = '';
+    });
+  });
+
+  prev.addEventListener('transitionend', () => {
+    prev.classList.remove('active','exit-left');
+    prev.style.transform = '';
+  }, {once: true});
+
+  cur = id;
+}
+
+function show(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.add('visible');
+}
+
+function hide(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.remove('visible');
+}
+</script>
+</body>
+</html>

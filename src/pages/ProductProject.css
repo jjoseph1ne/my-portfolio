@@ -1,0 +1,1599 @@
+.folio-project-page .folio-main {
+  gap: 54px;
+  padding-inline: clamp(40px, 6.5vw, 110px);
+}
+
+.folio-project-page {
+  position: relative;
+  isolation: isolate;
+}
+
+.folio-project-page::before {
+  content: '';
+  position: absolute;
+  inset: -40px 0 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(244, 183, 205, 0.22), transparent 22%),
+    radial-gradient(circle at 82% 16%, rgba(241, 208, 174, 0.16), transparent 20%),
+    linear-gradient(180deg, rgba(253, 244, 247, 0.88), rgba(251, 243, 240, 0.74));
+}
+
+.folio-project-page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.45;
+  background-image:
+    radial-gradient(circle at 12px 12px, rgba(187, 88, 130, 0.2) 0 1.4px, transparent 1.6px),
+    radial-gradient(circle at 42px 28px, rgba(255, 255, 255, 0.7) 0 1.2px, transparent 1.4px),
+    radial-gradient(circle at 72px 52px, rgba(221, 145, 176, 0.18) 0 1.5px, transparent 1.7px);
+  background-size: 120px 120px;
+  pointer-events: none;
+}
+
+.folio-project-back {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-label);
+}
+
+.folio-project-back-standalone {
+  margin-left: 18px;
+  margin-bottom: -22px;
+}
+
+.folio-project-hero {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  min-height: 72vh;
+  padding: 18px 34px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  border-radius: 34px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 26px 72px rgba(18, 18, 18, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-project-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 244, 247, 0.56) 0%,
+      rgba(255, 243, 246, 0.26) 22%,
+      rgba(255, 242, 245, 0.8) 100%
+    ),
+    url('/projects/soleluxe-previews/cover.png') center 0% / 112% auto no-repeat;
+  z-index: 0;
+}
+
+.folio-project-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 245, 247, 0.72) 0%,
+      rgba(255, 245, 247, 0.2) 42%,
+      rgba(255, 245, 247, 0.78) 100%
+    );
+  z-index: 0;
+}
+
+.folio-project-intro,
+.folio-project-hero-lower {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.folio-project-intro {
+  display: grid;
+  gap: 8px;
+}
+
+.folio-project-intro h1 {
+  font-size: clamp(2.7rem, 5vw, 5.4rem);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+  color: var(--c-heading);
+}
+
+.folio-project-subtitle {
+  font-size: 0.96rem;
+  line-height: 1.42;
+  color: var(--c-heading);
+}
+
+.folio-project-hero-lower {
+  display: grid;
+  gap: 18px;
+  margin-top: clamp(16px, 3.2vh, 30px);
+  padding-top: 0;
+}
+
+.folio-project-competition {
+  display: grid;
+  gap: 8px;
+}
+
+.folio-project-competition p {
+  max-width: 86ch;
+  font-size: 14px;
+  line-height: 1.72;
+  color: var(--c-heading);
+}
+
+.folio-project-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px 22px;
+}
+
+.folio-project-meta p {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--c-body);
+}
+
+.folio-project-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.folio-project-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.34);
+  box-shadow:
+    0 16px 42px rgba(18, 18, 18, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(22px) saturate(145%);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-heading);
+}
+
+.folio-project-section {
+  display: grid;
+  gap: 18px;
+  padding-inline: 18px;
+}
+
+.folio-project-section-head {
+  display: grid;
+  gap: 10px;
+  max-width: 980px;
+}
+
+.folio-project-section-head-tight {
+  max-width: 1180px;
+}
+
+.folio-project-section-head-compact {
+  gap: 4px;
+}
+
+.folio-project-section-head h2 {
+  font-size: clamp(1.42rem, 2.15vw, 2.02rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+  color: var(--c-heading);
+}
+
+.folio-project-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.folio-project-grid.two-up {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.folio-project-grid.three-up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.folio-project-grid-compact {
+  gap: 14px;
+}
+
+.folio-project-card,
+.folio-project-shift-card,
+.folio-project-tier-card {
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 248, 0.68), rgba(255, 247, 245, 0.42));
+  box-shadow:
+    0 22px 60px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-project-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 170px;
+  padding: 20px 22px;
+}
+
+.folio-project-card p,
+.folio-project-shift-card p,
+.folio-project-tier-card p {
+  font-size: 14px;
+  line-height: 1.72;
+  color: var(--c-body);
+}
+
+.folio-sitemap-map {
+  display: grid;
+  grid-template-columns: 138px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.folio-sitemap-map-home {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  padding: 28px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 248, 238, 0.88), rgba(255, 244, 230, 0.56));
+  box-shadow:
+    0 18px 48px rgba(153, 92, 118, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--c-heading);
+}
+
+.folio-sitemap-map-home::after {
+  content: '';
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  width: 22px;
+  height: 1.5px;
+  background: rgba(161, 89, 121, 0.28);
+}
+
+.folio-sitemap-map-rows {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  padding-left: 2px;
+}
+
+.folio-sitemap-map-rows::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 34px;
+  bottom: 34px;
+  width: 1.5px;
+  background: rgba(161, 89, 121, 0.22);
+}
+
+.folio-sitemap-map-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding-left: 24px;
+}
+
+.folio-sitemap-map-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 24px;
+  height: 1.5px;
+  background: rgba(161, 89, 121, 0.28);
+}
+
+.folio-sitemap-map-row-detail {
+  min-height: 120px;
+}
+
+.folio-sitemap-map-branch {
+  display: grid;
+  place-items: center;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 1px solid rgba(220, 244, 214, 0.92);
+  border-radius: 16px;
+  background: rgba(232, 248, 227, 0.88);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: #47564f;
+  text-align: center;
+}
+
+.folio-sitemap-map-detail {
+  display: grid;
+  gap: 12px;
+  padding: 14px 16px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 248, 0.74), rgba(255, 247, 244, 0.44));
+  box-shadow:
+    0 20px 56px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+.folio-sitemap-map-group,
+.folio-sitemap-map-stack,
+.folio-sitemap-map-note-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.folio-sitemap-dropdown-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 10px 16px;
+  align-items: start;
+}
+
+.folio-sitemap-dropdown-grid::before {
+  content: '';
+  position: absolute;
+  left: 203px;
+  top: 24px;
+  bottom: 24px;
+  width: 1.5px;
+  background: rgba(161, 89, 121, 0.16);
+}
+
+.folio-sitemap-dropdown-chip {
+  justify-self: start;
+  width: 100%;
+  min-height: 48px;
+}
+
+.folio-sitemap-dropdown-note-tall {
+  grid-row: span 2;
+  min-height: 106px;
+}
+
+.folio-sitemap-dropdown-custom {
+  display: grid;
+  gap: 10px;
+  align-items: start;
+}
+
+.folio-sitemap-dropdown-tail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  padding-left: 26px;
+}
+
+.folio-sitemap-dropdown-tail::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 1.5px;
+  background: rgba(161, 89, 121, 0.3);
+  transform: translateY(-50%);
+}
+
+.folio-sitemap-map-track {
+  height: 1.5px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(161, 89, 121, 0.16), rgba(161, 89, 121, 0.02));
+}
+
+.folio-sitemap-map-chip-row,
+.folio-sitemap-map-tail {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.folio-sitemap-map-tail-line {
+  flex: 1 1 120px;
+  min-width: 120px;
+  height: 1.5px;
+  background: rgba(161, 89, 121, 0.28);
+}
+
+.folio-sitemap-map-note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.folio-sitemap-map-chip,
+.folio-sitemap-map-note {
+  min-height: 40px;
+  border-radius: 14px;
+  font-size: 11px;
+  line-height: 1.46;
+}
+
+.folio-sitemap-map-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  background: rgba(211, 244, 247, 0.82);
+  color: var(--c-heading);
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.98);
+}
+
+.folio-sitemap-map-chip-soft {
+  background: rgba(231, 211, 250, 0.72);
+}
+
+.folio-sitemap-map-chip-accent {
+  background: rgba(231, 211, 250, 0.82);
+}
+
+.folio-sitemap-map-chip-pink {
+  background: rgba(248, 183, 204, 0.86);
+}
+
+.folio-sitemap-map-note {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(207, 224, 255, 0.68);
+  color: #425067;
+}
+
+.folio-sitemap-map-note-table {
+  min-height: 84px;
+}
+
+.folio-sitemap-map-pair {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.folio-sitemap-map-pair-shortcuts {
+  gap: 12px;
+}
+
+.folio-sitemap-shortcuts-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 10px 14px;
+  align-items: start;
+}
+
+.folio-sitemap-shortcuts-chip-column {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  margin-top: 2px;
+}
+
+.folio-sitemap-shortcuts-chip-column .folio-sitemap-map-chip {
+  width: 100%;
+  justify-content: flex-start;
+  padding-inline: 14px;
+}
+
+.folio-persona-header {
+  display: grid;
+  gap: 8px;
+  max-width: 760px;
+}
+
+.folio-persona-duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.folio-persona-header h3 {
+  font-size: 1.28rem;
+  line-height: 1.16;
+  color: var(--c-heading);
+}
+
+.folio-persona-profile {
+  display: grid;
+  gap: 12px;
+  padding: 20px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 248, 0.78), rgba(255, 247, 244, 0.48));
+  box-shadow:
+    0 22px 60px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-persona-profile h4 {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--c-heading);
+}
+
+.folio-persona-profile > p,
+.folio-persona-points p,
+.folio-persona-header p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--c-body);
+}
+
+.folio-persona-points {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.folio-persona-points > div {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 239, 244, 0.84);
+}
+
+.folio-persona-points-warm > div {
+  background: rgba(255, 247, 234, 0.88);
+}
+
+.folio-persona-points strong {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #a15b79;
+}
+
+.folio-persona-profile blockquote {
+  font-size: 15px;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--c-heading);
+}
+
+.folio-project-sitemap {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.folio-sitemap-root {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  padding: 24px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 248, 238, 0.88), rgba(255, 244, 230, 0.56));
+  box-shadow:
+    0 18px 48px rgba(153, 92, 118, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--c-heading);
+  position: relative;
+}
+
+.folio-sitemap-root::after {
+  content: '';
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  width: 22px;
+  height: 1.5px;
+  background: rgba(161, 89, 121, 0.26);
+}
+
+.folio-sitemap-column {
+  display: grid;
+  gap: 18px;
+}
+
+.folio-sitemap-branch,
+.folio-sitemap-account-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 248, 0.78), rgba(255, 247, 244, 0.48));
+  box-shadow:
+    0 20px 56px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  position: relative;
+}
+
+.folio-sitemap-branch::before,
+.folio-sitemap-account-card::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 32px;
+  width: 22px;
+  height: 1.5px;
+  background: rgba(161, 89, 121, 0.26);
+}
+
+.folio-sitemap-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(161, 89, 121, 0.82);
+}
+
+.folio-sitemap-flow-line {
+  height: 1.5px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(161, 89, 121, 0.18), rgba(161, 89, 121, 0.04));
+}
+
+.folio-sitemap-row,
+.folio-sitemap-note-row,
+.folio-sitemap-detail-chain,
+.folio-sitemap-account-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.folio-sitemap-stack,
+.folio-sitemap-note-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.folio-sitemap-split {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.folio-sitemap-inline-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.folio-sitemap-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 14px 34px rgba(153, 92, 118, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.98);
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--c-heading);
+  text-align: center;
+}
+
+.folio-sitemap-node-title {
+  justify-content: flex-start;
+  background: rgba(238, 255, 233, 0.74);
+}
+
+.folio-sitemap-node-accent {
+  background: rgba(243, 176, 255, 0.55);
+}
+
+.folio-sitemap-node-soft {
+  background: rgba(255, 199, 215, 0.55);
+}
+
+.folio-sitemap-note {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  background: rgba(207, 224, 255, 0.68);
+  font-size: 11px;
+  line-height: 1.48;
+  color: #425067;
+}
+
+.folio-sitemap-row-shortcuts .folio-sitemap-node {
+  background: rgba(243, 220, 255, 0.56);
+}
+
+.folio-sitemap-account-area {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 228px;
+  gap: 18px;
+}
+
+.folio-sitemap-account-grid {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.folio-project-shift-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.folio-project-shift-grid-compact {
+  gap: 14px;
+}
+
+.folio-project-shift-card {
+  display: grid;
+  gap: 12px;
+  min-height: 164px;
+  padding: 20px 22px;
+}
+
+.folio-project-shift-card span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-label);
+}
+
+.folio-project-shift-card strong {
+  font-size: 0.96rem;
+  line-height: 1.42;
+  color: var(--c-heading);
+  font-weight: 600;
+}
+
+.folio-persona-card {
+  display: grid;
+  gap: 18px;
+  padding: 22px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 248, 0.78), rgba(255, 247, 244, 0.48));
+  box-shadow:
+    0 24px 62px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-persona-intro {
+  display: grid;
+  gap: 10px;
+  max-width: 72ch;
+}
+
+.folio-persona-intro h3 {
+  font-size: 1.28rem;
+  line-height: 1.15;
+  color: var(--c-heading);
+}
+
+.folio-persona-intro p,
+.folio-persona-grid p {
+  font-size: 14px;
+  line-height: 1.72;
+  color: var(--c-body);
+}
+
+.folio-persona-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.folio-persona-grid article {
+  display: grid;
+  gap: 8px;
+  padding: 16px 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.folio-tier-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.folio-tier-gallery-card {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 248, 0.78), rgba(255, 247, 244, 0.48));
+  box-shadow:
+    0 22px 58px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-tier-gallery-art {
+  min-height: 220px;
+  border-radius: 22px;
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.folio-tier-gallery-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0;
+}
+
+.folio-tier-gallery-copy {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.folio-tier-gallery-copy h3 {
+  font-size: 1.18rem;
+  line-height: 1.16;
+  color: var(--c-heading);
+}
+
+.folio-tier-gallery-copy p {
+  font-size: 14px;
+  line-height: 1.72;
+  color: var(--c-body);
+}
+
+.folio-tier-asset-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  justify-items: start;
+}
+
+.folio-tier-asset-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(82, 72, 79, 0.92);
+}
+
+.folio-project-flow-map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.folio-project-flow-diagram {
+  display: grid;
+  gap: 16px;
+  padding: 22px 24px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(250, 194, 216, 0.28), transparent 20%),
+    linear-gradient(180deg, rgba(255, 246, 248, 0.78), rgba(255, 244, 240, 0.48));
+  box-shadow:
+    0 26px 72px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-project-flow-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.folio-project-flow-note {
+  max-width: 70ch;
+  font-size: 13px;
+  line-height: 1.64;
+  color: var(--c-body);
+}
+
+.folio-flow-linear,
+.folio-flow-branch {
+  display: grid;
+  gap: 10px;
+  position: relative;
+}
+
+.folio-flow-linear::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 24px;
+  bottom: 24px;
+  width: 1.5px;
+  background: rgba(161, 89, 121, 0.34);
+}
+
+.folio-flow-node {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 70px;
+  padding: 14px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.48);
+  box-shadow:
+    0 16px 38px rgba(153, 92, 118, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px) saturate(145%);
+  text-align: left;
+  color: var(--c-heading);
+  position: relative;
+}
+
+.folio-flow-linear .folio-flow-node {
+  margin-left: 28px;
+}
+
+.folio-flow-linear .folio-flow-node::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 28px;
+  width: 20px;
+  height: 1.5px;
+  background: rgba(161, 89, 121, 0.34);
+}
+
+.folio-flow-node span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(161, 89, 121, 0.82);
+}
+
+.folio-flow-node strong {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.folio-flow-branch {
+  padding-top: 2px;
+}
+
+.folio-flow-branch::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 76px;
+  width: 1.5px;
+  height: calc(100% - 144px);
+  transform: translateX(-50%);
+  background: rgba(161, 89, 121, 0.24);
+}
+
+.folio-flow-node-top {
+  max-width: 340px;
+  justify-self: center;
+  width: 100%;
+}
+
+.folio-flow-branch-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  position: relative;
+}
+
+.folio-flow-branch-row::before {
+  content: '';
+  position: absolute;
+  left: calc(16.66% + 34px);
+  right: calc(16.66% + 34px);
+  top: -6px;
+  height: 1.5px;
+  background: rgba(161, 89, 121, 0.28);
+}
+
+.folio-flow-node-preview,
+.folio-flow-node-bottom {
+  max-width: 388px;
+  justify-self: center;
+  width: 100%;
+}
+
+.folio-flow-node-preview::before,
+.folio-flow-node-bottom::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -12px;
+  width: 1.5px;
+  height: 12px;
+  transform: translateX(-50%);
+  background: rgba(161, 89, 121, 0.28);
+}
+
+.folio-homepage-showcase {
+  display: grid;
+  gap: 18px;
+}
+
+.folio-homepage-embed-frame {
+  overflow: hidden;
+  position: relative;
+  min-height: 0;
+  padding-top: 59.6%;
+  border: 1px solid rgba(255, 255, 255, 0.84);
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 249, 245, 0.82), rgba(255, 246, 241, 0.58));
+  box-shadow:
+    0 22px 56px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.98);
+}
+
+.folio-homepage-embed {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.folio-homepage-embed-note {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--c-label);
+}
+
+.folio-design-system-layout {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.folio-design-panel {
+  display: grid;
+  gap: 12px;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 248, 0.82), rgba(255, 247, 244, 0.52));
+  box-shadow:
+    0 18px 50px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-design-panel p,
+.folio-design-panel li {
+  font-size: 13px;
+  line-height: 1.68;
+  color: var(--c-body);
+}
+
+.folio-design-panel-overview {
+  grid-column: span 4;
+}
+
+.folio-design-panel-logo {
+  grid-column: span 4;
+}
+
+.folio-design-panel-color {
+  grid-column: span 4;
+}
+
+.folio-design-panel-tone {
+  grid-column: span 3;
+  text-align: center;
+  justify-items: center;
+  align-content: start;
+  padding-top: 10px;
+}
+
+.folio-design-panel-pattern {
+  grid-column: span 5;
+}
+
+.folio-design-panel-ui {
+  grid-column: span 4;
+}
+
+.folio-design-panel-imagery {
+  grid-column: span 12;
+}
+
+.folio-design-logo {
+  font-size: clamp(2.1rem, 4vw, 3.7rem);
+  line-height: 0.95;
+  color: #ef7ea8;
+  letter-spacing: -0.06em;
+}
+
+.folio-design-logo-image {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+}
+
+.folio-design-swatches {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.folio-swatch {
+  display: block;
+  aspect-ratio: 1 / 1.12;
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.folio-swatch-berry {
+  background: #c53068;
+}
+
+.folio-swatch-cream {
+  background: #f4edd7;
+}
+
+.folio-swatch-pink {
+  background: #f0a9c7;
+}
+
+.folio-swatch-green {
+  background: #235e47;
+}
+
+.folio-design-panel-tone ul {
+  display: grid;
+  gap: 6px;
+  justify-items: center;
+}
+
+.folio-design-patterns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.folio-design-pattern-image {
+  display: block;
+  width: 100%;
+  min-height: 136px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.folio-design-ui-preview {
+  display: grid;
+  gap: 10px;
+}
+
+.folio-design-ui-nav {
+  height: 28px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c53068 0 34%, rgba(255, 255, 255, 0.92) 34%);
+}
+
+.folio-design-ui-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.folio-design-ui-cards span,
+.folio-design-ui-pills span {
+  display: block;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.folio-design-ui-cards span {
+  min-height: 88px;
+}
+
+.folio-design-ui-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.folio-design-ui-pills span {
+  width: 78px;
+  height: 34px;
+  border-radius: 999px;
+}
+
+.folio-design-imagery-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(72px, 72px));
+  gap: 8px;
+  justify-content: center;
+}
+
+.folio-design-imagery-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  padding: 3px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.folio-project-prose-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1120px;
+}
+
+.folio-project-prose-columns p {
+  font-size: 14px;
+  line-height: 1.78;
+  color: var(--c-body);
+}
+
+.folio-project-feature-list {
+  display: grid;
+  gap: 14px;
+}
+
+.folio-project-feature-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: stretch;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 245, 247, 0.8), rgba(255, 247, 244, 0.48));
+  box-shadow:
+    0 22px 60px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-project-feature-number {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(161, 89, 121, 0.82);
+}
+
+.folio-project-feature-copy h3 {
+  margin-bottom: 10px;
+  font-size: 1.02rem;
+  line-height: 1.32;
+  color: var(--c-heading);
+}
+
+.folio-project-feature-copy p {
+  font-size: 14px;
+  line-height: 1.74;
+  color: var(--c-body);
+}
+
+.folio-project-feature-visual {
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow:
+    0 16px 36px rgba(153, 92, 118, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  display: grid;
+}
+
+.folio-project-feature-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+
+.folio-project-feature-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  height: 100%;
+  place-items: center;
+  gap: 16px;
+  padding: 18px;
+}
+
+.folio-project-feature-visual-grid img {
+  width: 100%;
+  max-width: 260px;
+  min-height: 0;
+  height: auto;
+  object-fit: contain;
+}
+
+.folio-project-feature-row:nth-child(2) .folio-project-feature-visual,
+.folio-project-feature-row:nth-child(3) .folio-project-feature-visual {
+  padding: 18px;
+  place-items: center;
+}
+
+.folio-project-feature-row:nth-child(2) .folio-project-feature-visual img,
+.folio-project-feature-row:nth-child(3) .folio-project-feature-visual > img {
+  width: 100%;
+  max-width: 320px;
+  min-height: 0;
+  height: auto;
+  object-fit: contain;
+}
+
+.folio-project-demo-frame {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 245, 247, 0.78), rgba(255, 247, 244, 0.52));
+  box-shadow:
+    0 24px 66px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-project-demo-aspect {
+  position: relative;
+  width: 100%;
+  padding-top: 59.6%;
+}
+
+.folio-project-demo-embed {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.folio-project-tool-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.folio-project-tool-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 247, 248, 0.76), rgba(255, 248, 244, 0.46));
+  box-shadow:
+    0 16px 40px rgba(153, 92, 118, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px) saturate(145%);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--c-heading);
+}
+
+.folio-project-image-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 246, 248, 0.7), rgba(255, 247, 244, 0.42));
+  box-shadow:
+    0 22px 60px rgba(153, 92, 118, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+
+.folio-project-image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1180px) {
+  .folio-project-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .folio-sitemap-map {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-sitemap-map-row,
+  .folio-sitemap-map-pair,
+  .folio-sitemap-dropdown-layout,
+  .folio-sitemap-map-note-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-sitemap-split,
+  .folio-sitemap-inline-row,
+  .folio-sitemap-account-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-persona-grid,
+  .folio-persona-duo,
+  .folio-tier-gallery,
+  .folio-homepage-montage,
+  .folio-design-system-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .folio-design-panel-overview,
+  .folio-design-panel-logo,
+  .folio-design-panel-color,
+  .folio-design-panel-tone,
+  .folio-design-panel-pattern,
+  .folio-design-panel-ui,
+  .folio-design-panel-imagery {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 960px) {
+  .folio-project-grid.two-up,
+  .folio-project-grid.three-up,
+  .folio-project-shift-grid,
+  .folio-project-flow-map,
+  .folio-tier-gallery,
+  .folio-homepage-montage,
+  .folio-persona-grid,
+  .folio-persona-duo,
+  .folio-design-system-layout,
+  .folio-project-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-project-sitemap {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-sitemap-root {
+    min-height: auto;
+  }
+
+  .folio-sitemap-root::after,
+  .folio-sitemap-branch::before,
+  .folio-sitemap-account-card::before {
+    display: none;
+  }
+
+  .folio-sitemap-account-area {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-flow-branch-row {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-flow-branch-row::before,
+  .folio-flow-branch::before {
+    display: none;
+  }
+
+  .folio-tier-gallery-card {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-tier-gallery-art {
+    min-height: 180px;
+  }
+
+  .folio-project-feature-row,
+  .folio-project-prose-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .folio-design-imagery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .folio-project-page .folio-main {
+    gap: 40px;
+    padding-inline: 8px;
+  }
+
+  .folio-project-hero {
+    min-height: auto;
+    padding: 18px 18px 22px;
+  }
+
+  .folio-project-back-standalone {
+    margin-left: 8px;
+    margin-bottom: -16px;
+  }
+
+  .folio-project-section {
+    padding-inline: 8px;
+  }
+
+  .folio-project-demo-frame,
+  .folio-project-demo-embed,
+  .folio-homepage-embed-frame,
+  .folio-homepage-embed {
+    min-height: 58vh;
+  }
+
+  .folio-homepage-showcase {
+    gap: 14px;
+  }
+
+  .folio-design-imagery-grid {
+    grid-template-columns: repeat(2, minmax(72px, 72px));
+  }
+}

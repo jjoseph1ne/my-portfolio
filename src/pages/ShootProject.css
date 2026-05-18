@@ -1,0 +1,59 @@
+.shoot-project-page {
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+.shoot-project-stack {
+  grid-column: 1;
+  width: min(100%, 1240px);
+  gap: 28px;
+  justify-self: stretch;
+}
+
+.shoot-project-text-block {
+  max-width: none;
+}
+
+.shoot-project-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.shoot-project-meta {
+  margin-bottom: 8px;
+}
+
+.shoot-project-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.76fr);
+  gap: 16px;
+  align-items: end;
+}
+
+.shoot-project-gallery .archive-project-panel {
+  margin: 0;
+}
+
+.shoot-project-gallery-primary,
+.shoot-project-gallery-secondary {
+  width: 100%;
+}
+
+.shoot-project-gallery-secondary {
+  align-self: end;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 900px) {
+  .shoot-project-intro,
+  .shoot-project-gallery {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .shoot-project-gallery-secondary {
+    padding-bottom: 0;
+  }
+}
