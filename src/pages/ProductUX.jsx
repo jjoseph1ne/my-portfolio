@@ -200,11 +200,12 @@ export default function ProductUX() {
     <PortfolioShell>
       <div className="folio-page folio-page-product">
         <main className="folio-main">
+          <Link to="/product" className="folio-product-back">← Back to Projects</Link>
           <section className="folio-product-hero">
             <div className="folio-product-hero-bar">
-              <span className="folio-kicker">Product / Design</span>
+              <span className="folio-kicker">Design / Product</span>
               <div className="folio-product-manifesto" aria-label="Product design introduction">
-                <span>Product systems.</span>
+                <span>Experiences built around people.</span>
                 <span>Three selected studies.</span>
               </div>
             </div>

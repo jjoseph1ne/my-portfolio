@@ -27,13 +27,25 @@ const education = [
       },
       {
         label: 'Awards',
-        value: "2023-2024, 2024-2025 Tisch School of the Arts Dean's List",
+        value: "2023-2024, 2024-2025, 2025-2026 Tisch School of the Arts Dean's List",
       },
     ],
   },
 ]
 
 const experience = [
+  {
+    period: 'Aug 2026 - Present',
+    company: 'Columbia Business School (Prof. Michel Tuan Pham)',
+    role: 'Part-time Research Assistant',
+    lines: [],
+  },
+  {
+    period: 'Jun 2026 - Dec 2026',
+    company: 'Hakuhodo USA Inc.',
+    role: 'Strategy & Account Management Intern',
+    lines: [],
+  },
   {
     period: 'May 2025 - Jul 2025',
     company: 'Phoenix Digital Technology',
@@ -104,11 +116,11 @@ const skills = [
   },
   {
     label: 'Platforms',
-    items: ['Excel', 'Figma', 'Adobe Creative Suite', 'Canva', 'Claude Code', 'Midjourney', 'Nano Banana 2', 'OpenAI Codex'],
+    items: ['Excel', 'Figma', 'Adobe Creative Suite', 'Canva', 'Claude Code', 'Midjourney', 'OpenAI Codex', 'Sprinklr', 'Meta Business Suite'],
   },
   {
     label: 'Languages',
-    items: ['English (native)', 'Mandarin Chinese (native)', 'French (basic)'],
+    items: ['English (fluent)', 'Mandarin Chinese (native)', 'French (basic)'],
   },
 ]
 

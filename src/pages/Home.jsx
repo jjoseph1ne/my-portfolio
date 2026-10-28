@@ -6,9 +6,9 @@ import './Home.css'
 
 const selectedWork = [
   {
-    title: 'Product / Design',
+    title: 'Projects',
     to: '/product',
-    summary: 'UI/UX Design, Product Design, Prototypes',
+    summary: 'Product design, data research, prototypes',
     tone: 'home-work-card-silver',
   },
   {

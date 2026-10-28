@@ -1,0 +1,118 @@
+.projects-index {
+  display: grid;
+  align-content: center;
+  gap: clamp(34px, 5vw, 72px);
+  min-height: calc(100dvh - 180px);
+  padding: clamp(42px, 6vw, 90px) clamp(8px, 3vw, 48px);
+}
+
+.projects-index-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--c-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.projects-index-list {
+  border-top: 1px solid rgba(37, 49, 62, 0.2);
+}
+
+.projects-index-link {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr) 90px 28px;
+  align-items: center;
+  gap: clamp(12px, 2.5vw, 34px);
+  min-height: clamp(130px, 18vh, 190px);
+  padding: 22px 10px;
+  border-bottom: 1px solid rgba(37, 49, 62, 0.2);
+  color: var(--c-heading);
+  text-decoration: none;
+  transition: background 250ms ease;
+}
+
+.projects-index-link:hover,
+.projects-index-link:focus-visible {
+  background: rgba(184, 217, 234, 0.18);
+}
+
+.projects-index-link:focus-visible {
+  outline: 2px solid rgba(77, 132, 172, 0.6);
+  outline-offset: -2px;
+}
+
+.projects-index-number,
+.projects-index-count {
+  align-self: start;
+  padding-top: 6px;
+  color: var(--c-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.projects-index-copy {
+  display: grid;
+  gap: 12px;
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projects-index-link:hover .projects-index-copy,
+.projects-index-link:focus-visible .projects-index-copy {
+  transform: translateX(10px);
+}
+
+.projects-index-title {
+  font-size: clamp(2rem, 4.5vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.065em;
+}
+
+.projects-index-title span {
+  color: #85afc3;
+}
+
+.projects-index-description {
+  color: var(--c-body);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.projects-index-arrow {
+  align-self: start;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projects-index-link:hover .projects-index-arrow,
+.projects-index-link:focus-visible .projects-index-arrow {
+  transform: translate(5px, -5px);
+}
+
+@media (max-width: 720px) {
+  .projects-index {
+    min-height: auto;
+    gap: 44px;
+    padding: 64px 4px 88px;
+  }
+
+  .projects-index-link {
+    grid-template-columns: 28px minmax(0, 1fr) 24px;
+    gap: 12px;
+  }
+
+  .projects-index-count {
+    display: none;
+  }
+
+  .projects-index-title {
+    font-size: clamp(2.1rem, 7vw, 3.6rem);
+  }
+}

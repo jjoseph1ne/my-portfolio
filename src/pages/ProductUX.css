@@ -2,6 +2,20 @@
   gap: 44px;
 }
 
+.folio-product-back {
+  width: fit-content;
+  margin: 8px 0 -24px 10px;
+  color: var(--c-label);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.folio-product-back:hover {
+  color: var(--c-heading);
+}
+
 .folio-product-hero {
   display: grid;
   justify-items: center;
@@ -301,6 +315,7 @@
     linear-gradient(160deg, rgba(255, 255, 255, 0.84), rgba(238, 241, 243, 0.96)),
     linear-gradient(135deg, rgba(225, 229, 236, 0.28), rgba(246, 245, 242, 0.18));
 }
+
 
 .folio-product-bottom-bar {
   display: flex;

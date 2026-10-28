@@ -153,8 +153,8 @@ export default function SoleluxeProject() {
     <PortfolioShell>
       <div className="folio-page folio-project-page">
         <main className="folio-main">
-          <Link to="/product" className="folio-project-back folio-project-back-standalone">
-            Back to Product / Design
+          <Link to="/product/design" className="folio-project-back folio-project-back-standalone">
+            Back to Design / Product
           </Link>
 
           <section className="folio-project-hero">

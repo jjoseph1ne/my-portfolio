@@ -1,0 +1,110 @@
+.data-index {
+  display: grid;
+  gap: clamp(34px, 5vw, 68px);
+  padding: 28px clamp(8px, 3vw, 48px) 100px;
+}
+
+.data-index-back {
+  width: fit-content;
+  color: var(--c-label);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.data-index-back:hover {
+  color: var(--c-heading);
+}
+
+.data-index-heading {
+  display: grid;
+  gap: 16px;
+}
+
+.data-index-heading h1 {
+  color: var(--c-heading);
+  font-size: clamp(3.2rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+}
+
+.data-index-heading p {
+  max-width: 58ch;
+  color: var(--c-body);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.data-index-project {
+  display: grid;
+  align-content: space-between;
+  min-height: min(65vh, 670px);
+  padding: clamp(24px, 4vw, 54px);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 80% 24%, rgba(212, 241, 245, 0.85), transparent 40%),
+    linear-gradient(145deg, #eaf3f5, #c4dfe5);
+  color: #26414b;
+  text-decoration: none;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.data-index-project:hover,
+.data-index-project:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 55px rgba(26, 63, 76, 0.13);
+}
+
+.data-index-project:focus-visible {
+  outline: 2px solid #548aa2;
+  outline-offset: 4px;
+}
+
+.data-index-project-top,
+.data-index-project-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.data-index-project-center {
+  display: grid;
+  gap: 14px;
+}
+
+.data-index-project-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.data-index-project-center h2 {
+  font-size: clamp(3.4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+}
+
+.data-index-project-center p {
+  max-width: 46ch;
+  font-size: clamp(15px, 1.7vw, 20px);
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .data-index-project {
+    min-height: 500px;
+  }
+
+  .data-index-project-top,
+  .data-index-project-bottom {
+    flex-wrap: wrap;
+  }
+}

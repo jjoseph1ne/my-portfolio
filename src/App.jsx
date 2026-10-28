@@ -2,9 +2,12 @@ import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import ProductUX from './pages/ProductUX'
+import ProjectsLanding from './pages/ProjectsLanding'
+import DataResearch from './pages/DataResearch'
 import SoleluxeProject from './pages/SoleluxeProject'
 import FudgetProject from './pages/FudgetProject'
 import PrisenseProject from './pages/PrisenseProject'
+import IdentityBiasAuditProject from './pages/IdentityBiasAuditProject'
 import Marketing from './pages/Marketing'
 import TNTProject from './pages/TNTProject'
 import Photography from './pages/Photography'
@@ -48,10 +51,13 @@ function AppRouter() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/product" element={<ProductUX />} />
+      <Route path="/product" element={<ProjectsLanding />} />
+      <Route path="/product/design" element={<ProductUX />} />
+      <Route path="/product/data-research" element={<DataResearch />} />
       <Route path="/product/soleluxe" element={<SoleluxeProject />} />
       <Route path="/product/fudget" element={<FudgetProject />} />
       <Route path="/product/prisense" element={<PrisenseProject />} />
+      <Route path="/product/identity-bias-audit" element={<IdentityBiasAuditProject />} />
       <Route path="/marketing" element={<Marketing />} />
       <Route path="/marketing/tnt" element={<TNTProject />} />
       <Route path="/photography" element={<Photography />} />

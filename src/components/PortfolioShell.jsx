@@ -3,7 +3,7 @@ import './PortfolioShell.css'
 
 const navItems = [
   { to: '/', label: 'Home' },
-  { to: '/product', label: 'Product / Design' },
+  { to: '/product', label: 'Projects' },
   { to: '/marketing', label: 'Marketing' },
   { to: '/photography', label: 'Archive' },
   { to: '/about', label: 'About' },
@@ -17,12 +17,7 @@ function isActive(pathname, to) {
 export default function PortfolioShell({ children, showFooter = true }) {
   const { pathname } = useLocation()
   const splitBackdrop =
-    pathname === '/photography'
-      ? {
-          leftImage: '/projects/archive-landing-assets/photography-fire.jpeg',
-          rightImage: '/projects/archive-landing-assets/visual-works-blue.jpeg',
-        }
-      : pathname === '/photography/photography'
+    pathname === '/photography/photography'
         ? {
             leftImage: '/projects/photography-sections-assets/photography-scenery-cover-02.JPG',
             rightImage: '/projects/photography-sections-assets/photography-portrait-cover-02.png',

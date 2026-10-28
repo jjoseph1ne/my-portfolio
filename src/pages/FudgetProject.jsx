@@ -17,8 +17,8 @@ export default function FudgetProject() {
     <PortfolioShell>
       <div className="folio-page folio-project-page folio-project-page-fudget">
         <main className="folio-main">
-          <Link to="/product" className="folio-project-back folio-project-back-standalone">
-            Back to Product / Design
+          <Link to="/product/design" className="folio-project-back folio-project-back-standalone">
+            Back to Design / Product
           </Link>
 
           <section className="folio-project-hero folio-project-hero-fudget">
